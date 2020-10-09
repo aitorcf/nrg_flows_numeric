@@ -1,0 +1,10 @@
+[param]
+symtype=QS
+discretization=Z
+z=0.875
+Lambda=2.5
+Tmin=1e-15
+keepenergy=10
+keep=5000
+
+model=CLEAN

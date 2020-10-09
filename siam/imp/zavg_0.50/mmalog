@@ -1,0 +1,255 @@
+NRG Ljubljana 2020.03 (c) Rok Zitko, rok.zitko@ijs.si, 2005-2019
+Mathematica version: 12.1.0 for Linux x86 (64-bit) (March 18, 2020)
+sneg version: 1.251
+Loading module initialparse.m
+Options: {}
+def1ch, NRDOTS=1
+H0=coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]])
+Loading module models.m
+models started
+Loading module custommodels.m
+Can't load custommodels.m. Continuing.
+
+UpSet::write: Tag Gamma in snegnonopQ[Gamma] is Protected.
+
+UpSet::write: Tag Gamma in Conjugate[Gamma] is Protected.
+NRDOTS:1 CHANNELS:1 COEFCHANNELS:1
+basis:{d[], f[0]}
+Hamiltonian generated. U/2 - coefzeta[1, 0] + delta*nc[d[0, 0], d[1, 0]] - (U*nc[d[0, 0], d[1, 0]])/2 + gammaPolCh[1]*nc[d[0, 0], f[1, 0, 0]] + delta*nc[d[0, 1], d[1, 1]] - (U*nc[d[0, 1], d[1, 1]])/2 + 
+   gammaPolCh[1]*nc[d[0, 1], f[1, 0, 1]] + gammaPolCh[1]*nc[f[0, 0, 0], d[1, 0]] + coefzeta[1, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + gammaPolCh[1]*nc[f[0, 0, 1], d[1, 1]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]] - 
+   U*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+H-conj[H]=0
+SCALE[0]=1.6370350019059374
+faktor=0.9658552372083249
+Generating basis
+Wilson chain
+Tmin=1.*^-15
+Tmin=1.*^-15 ==> Nmax=76
+DISCNMAX=76
+Discretization checksum [-1] (channel 1): 2.06133547549498521444494503979286554`10.*^-61
+BAND="flat" thetaCh={"2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+0.6066205563
+0.5667826114
+0.4496649983
+0.2792208536
+0.1685530279
+0.1052021689
+0.06634763252
+0.04192782266
+0.02650983733
+0.01676444483
+0.01060230653
+0.006705372031
+0.004240820528
+0.002682123048
+0.001696321699
+0.001072847572
+0.0006785282632
+0.0004291389236
+0.0002714112786
+0.0001716555627
+0.0001085645097
+0.00006866222465
+0.00004342580379
+0.00002746488983
+0.00001737032151
+0.00001098595593
+6.948128603e-6
+4.394382372e-6
+2.779251441e-6
+1.757752949e-6
+1.111700576e-6
+7.031011796e-7
+4.446802306e-7
+2.812404718e-7
+1.778720922e-7
+1.124961887e-7
+7.114883689e-8
+4.499847549e-8
+2.845953476e-8
+1.79993902e-8
+1.13838139e-8
+7.199756079e-9
+4.553525561e-9
+2.879902431e-9
+1.821410225e-9
+1.151960973e-9
+7.285640898e-10
+4.60784389e-10
+2.914256359e-10
+1.843137556e-10
+1.165702544e-10
+7.372550225e-11
+4.662810175e-11
+2.94902009e-11
+1.86512407e-11
+1.179608036e-11
+7.46049628e-12
+4.718432144e-12
+2.984198512e-12
+1.887372857e-12
+1.193679405e-12
+7.54949143e-13
+4.774717619e-13
+3.019796572e-13
+1.909887048e-13
+1.207918629e-13
+7.63954819e-14
+4.831674515e-14
+3.055819276e-14
+1.932669806e-14
+1.22232771e-14
+7.730679224e-15
+4.889310842e-15
+3.09227169e-15
+1.955724337e-15
+1.236908676e-15
+7.822897347e-16
+"zetatable" (channel 1)
+0.e-999
+0.e-998
+0.e-997
+0.e-997
+0.e-996
+0.e-995
+0.e-994
+0.e-993
+0.e-992
+0.e-991
+0.e-991
+0.e-990
+0.e-989
+0.e-988
+0.e-987
+0.e-986
+0.e-985
+0.e-985
+0.e-984
+0.e-983
+0.e-982
+0.e-981
+0.e-980
+0.e-979
+0.e-978
+0.e-978
+0.e-977
+0.e-976
+0.e-975
+0.e-974
+0.e-973
+0.e-972
+0.e-972
+0.e-971
+0.e-970
+0.e-969
+0.e-968
+0.e-967
+0.e-966
+0.e-965
+0.e-965
+0.e-964
+0.e-963
+0.e-962
+0.e-961
+0.e-960
+0.e-959
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-952
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-946
+0.e-945
+0.e-944
+0.e-943
+0.e-942
+0.e-941
+0.e-940
+0.e-939
+0.e-939
+0.e-938
+0.e-937
+0.e-936
+0.e-928
+0.e-899
+0.e-869
+Precision last xi:839.5069227266994
+Precision last zeta: 0.
+Discretization done.
+
+UpSet::write: Tag Gamma in snegnonopQ[Gamma] is Protected.
+
+General::stop: Further output of UpSet::write will be suppressed during this calculation.
+thetaCh={"2."}
+theta0Ch={"0."}
+gammaPolCh={"0."}
+checkdefinitions[] -> -0.15000000000000002
+calcgsenergy[]
+diagvc[{-2, 1}]
+Generating matrix: ham_-2.1
+hamil={{(U - 2*coefzeta[1, 0])/2}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{-1, 2}]
+Generating matrix: ham_-1.2
+hamil={{U/2, gammaPolCh[1]}, {gammaPolCh[1], delta - coefzeta[1, 0]}}
+dim={2, 2}
+det[vec]=-1. 1-abs=0.
+orthogonality check=0.
+diagvc[{0, 1}]
+Generating matrix: ham_0.1
+hamil={{U/2 + coefzeta[1, 0], Sqrt[2]*gammaPolCh[1], 0}, {Sqrt[2]*gammaPolCh[1], delta, Sqrt[2]*gammaPolCh[1]}, {0, Sqrt[2]*gammaPolCh[1], (4*delta + U - 2*coefzeta[1, 0])/2}}
+dim={3, 3}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{0, 3}]
+Generating matrix: ham_0.3
+hamil={{delta}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{1, 2}]
+Generating matrix: ham_1.2
+hamil={{delta + coefzeta[1, 0], -gammaPolCh[1]}, {-gammaPolCh[1], (4*delta + U)/2}}
+dim={2, 2}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{2, 1}]
+Generating matrix: ham_2.1
+hamil={{2*delta + U/2 + coefzeta[1, 0]}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+Lowest energies (absolute):{0., 0., 0., 0., 0.05, 0.05, 0.05, 0.05, 0.05, 0.05}
+Lowest energies (GS shifted):{0., 0., 0., 0., 0.05, 0.05, 0.05, 0.05, 0.05, 0.05}
+Scale factor SCALE(Ninit):1.6370350019059374
+Lowest energies (shifted and scaled):{0., 0., 0., 0., 0.030543024395805165, 0.030543024395805165, 0.030543024395805165, 0.030543024395805165, 0.030543024395805165, 0.030543024395805165}
+makeireducf GENERAL
+Loading module operators.m
+operators.m started
+operators.m done
+Loading module customoperators.m
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m
+Can't load modeloperators.m. Continuing.
+Timing report
+{basis, 0.013809`4.591707223109609}
+{ham, 0.097084`4.6605414046962075}
+{maketable, 0.336233`5.978185329055638}
+{xi, 1.1584`6.515403542349045}
+{_, 0}
+data
+"Success!"

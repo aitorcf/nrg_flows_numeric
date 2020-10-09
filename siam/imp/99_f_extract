@@ -1,0 +1,49 @@
+#!/usr/bin/env perl
+# Extract states from selected invariant subspace from annotated.dat
+# rok.zitko@ijs.si, June 2013
+
+use warnings;
+
+# @ARGV is the array of arguments
+# $#ARGV is a scalar with value equal to the last index of that array
+$#ARGV+1 == 4 or die; 
+
+# 'shift' returns the first value of an array and takes the 
+# element that contains it off the array
+# * Here the argument of 'shift' is the default variable: @ARGV 
+my $peo = shift; # e)ven or o)dd
+my $pq = shift;  # charge Q
+my $ps = shift;  # spin S
+my $nr = shift;  # seniority: the wanted eigenvalue for the set of q-numbers
+
+# Open "annotated.dat" for reading (<) and set F
+# as its handler
+open (F, "<annotated.dat") or die;
+
+# Define two global (no 'my') scalar variables
+$cnt = 0;       # -> tracks N
+$seniority = 0; # -> tracks eigenvalue
+
+# Loop over the lines in F, <F> being the variable 
+# corresponding to each line
+while (<F>) {
+  !/^#/ or next;     # -> continue if line does not contain "#"; otherwise, skip loop 
+  chomp;             # -> eliminate trailing separators (here \n in last line)
+  if ($_ eq "") {    # -> checks if line is empty (default var is line)
+    $cnt++;
+    $seniority = 0;  # -> resets count of eigenvalues for the next loop
+    next;
+  }
+  ($e, $q, $s) = split; # -> splits line into elements separated by standar separator
+                        #    and returns them as an array
+  if (($cnt % 2 == 0) xor ($peo eq "o")) {  # -> checks if only one of the two conditions is met
+    if (($q eq $pq) and ($s eq $ps)) {      # -> checks if the quantum numbers meet the ones in the line
+      $seniority++;                         # -> actualizes count of eigenvalues   
+      if ($seniority == $nr) {
+        print "$cnt $e\n";                  # -> prints N and the energy if it is the searched eigenvalue
+      }
+    }
+  }
+}
+
+print "\n";

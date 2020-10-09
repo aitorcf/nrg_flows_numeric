@@ -1,0 +1,19 @@
+[extra]
+U=1e-2
+Gamma=1e-5
+delta=0.0
+
+[param]
+symtype=QS
+discretization=Z
+Lambda=2.5
+Tmin=1e-15
+keepenergy=10
+keep=5000
+
+model=SIAM
+
+ops=SZ2f0 s^2 SdSf flm n_d n_f SdSd
+
+dumpannotated=40
+dumpgroups=false

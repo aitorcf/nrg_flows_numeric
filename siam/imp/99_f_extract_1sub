@@ -1,0 +1,13 @@
+#!/bin/bash
+
+O_OR_E=$1
+Q=$2
+S=$3
+if [ $# -gt 3 ]; then N_EIGENVALUES=$4; else N_EIGENVALUES=6; fi
+
+./99_f_extract ${O_OR_E} $Q $S 1 > ${O_OR_E}-q${Q}s${S}.dat
+i=2
+while [ $i -le $N_EIGENVALUES ]; do
+./99_f_extract ${O_OR_E} $Q $S $i >> ${O_OR_E}-q${Q}s${S}.dat
+i=`expr $i + 1`
+done

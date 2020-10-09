@@ -1,0 +1,976 @@
+"NRG Ljubljana -- impurity problem initialization code"
+"Dir: ""/home/aitor/nrg/siam/imp"
+"Path: "{"~", "~/nrg", "/home/aitor/nrgljubljana/nrginit"}
+"sneg 1.251 Copyright (C) 2002-2019 Rok Zitko"
+NRG Ljubljana 2020.03 (c) Rok Zitko, rok.zitko@ijs.si, 2005-2019
+Mathematica version: 12.1.0 for Linux x86 (64-bit) (March 18, 2020)
+sneg version: 1.251
+Loading module initialparse.m
+Options: {}
+def1ch, NRDOTS=1
+H0=coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]])
+Loading module models.m
+models started
+Loading module custommodels.m
+Can't load custommodels.m. Continuing.
+
+UpSet::write: Tag Gamma in snegnonopQ[Gamma] is Protected.
+
+UpSet::write: Tag Gamma in Conjugate[Gamma] is Protected.
+NRDOTS:1 CHANNELS:1 COEFCHANNELS:1
+basis:{d[], f[0]}
+Hamiltonian generated. U/2 - coefzeta[1, 0] + delta*nc[d[0, 0], d[1, 0]] - (U*nc[d[0, 0], d[1, 0]])/2 + gammaPolCh[1]*nc[d[0, 0], f[1, 0, 0]] + delta*nc[d[0, 1], d[1, 1]] - (U*nc[d[0, 1], d[1, 1]])/2 + 
+   gammaPolCh[1]*nc[d[0, 1], f[1, 0, 1]] + gammaPolCh[1]*nc[f[0, 0, 0], d[1, 0]] + coefzeta[1, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + gammaPolCh[1]*nc[f[0, 0, 1], d[1, 1]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]] - 
+   U*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+H-conj[H]=0
+SCALE[0]=1.1547005383792515
+faktor=1.5
+Generating basis
+Wilson chain
+Tmin=1.*^-15
+Tmin=1.*^-15 ==> Nmax=63
+DISCNMAX=63
+Discretization checksum [-1] (channel 1): 2.54448942696316559363158956989764514`10.*^-61
+BAND="flat" thetaCh={"2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+0.5547001962
+0.3493705174
+0.2144824869
+0.1267483085
+0.07377132472
+0.04270815568
+0.02468007657
+0.01425338998
+0.00823003456
+0.004751773597
+0.002743468738
+0.001583948375
+0.0009144941681
+0.0005279836749
+0.0003048315593
+0.000175994591
+0.0001016105261
+0.00005866486488
+0.00003387017559
+0.000019554955
+0.00001129005854
+6.518318336e-6
+3.763352846e-6
+2.172772779e-6
+1.254450949e-6
+7.24257593e-7
+4.181503163e-7
+2.414191977e-7
+1.393834388e-7
+8.047306588e-8
+4.646114625e-8
+2.682435529e-8
+1.548704875e-8
+8.941451765e-9
+5.162349583e-9
+2.980483922e-9
+1.720783194e-9
+9.934946405e-10
+5.735943982e-10
+3.311648802e-10
+1.911981327e-10
+1.103882934e-10
+6.373271091e-11
+3.67960978e-11
+2.124423697e-11
+1.226536593e-11
+7.081412323e-12
+4.088455311e-12
+2.360470774e-12
+1.362818437e-12
+7.868235914e-13
+4.542728123e-13
+2.622745305e-13
+1.514242708e-13
+8.742484349e-14
+5.047475692e-14
+2.91416145e-14
+1.682491897e-14
+9.713871499e-15
+5.608306325e-15
+3.237957166e-15
+1.869435442e-15
+1.079319055e-15
+6.231451472e-16
+"zetatable" (channel 1)
+0.e-999
+0.e-998
+0.e-998
+0.e-997
+0.e-996
+0.e-995
+0.e-994
+0.e-993
+0.e-992
+0.e-991
+0.e-991
+0.e-990
+0.e-989
+0.e-988
+0.e-987
+0.e-986
+0.e-985
+0.e-984
+0.e-983
+0.e-983
+0.e-982
+0.e-981
+0.e-980
+0.e-979
+0.e-978
+0.e-977
+0.e-976
+0.e-976
+0.e-975
+0.e-974
+0.e-973
+0.e-972
+0.e-971
+0.e-970
+0.e-969
+0.e-968
+0.e-968
+0.e-967
+0.e-966
+0.e-965
+0.e-964
+0.e-963
+0.e-962
+0.e-961
+0.e-960
+0.e-960
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-953
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-945
+0.e-945
+0.e-944
+Precision last xi:928.6849574539763
+Precision last zeta: 0.
+Discretization done.
+
+UpSet::write: Tag Gamma in snegnonopQ[Gamma] is Protected.
+
+General::stop: Further output of UpSet::write will be suppressed during this calculation.
+thetaCh={"2."}
+theta0Ch={"0.0002"}
+gammaPolCh={"0.008363003677699297"}
+checkdefinitions[] -> 0.031952014710797186
+calcgsenergy[]
+diagvc[{-2, 1}]
+Generating matrix: ham_-2.1
+hamil={{(U - 2*coefzeta[1, 0])/2}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{-1, 2}]
+Generating matrix: ham_-1.2
+hamil={{U/2, gammaPolCh[1]}, {gammaPolCh[1], delta - coefzeta[1, 0]}}
+dim={2, 2}
+det[vec]=-1. 1-abs=0.
+orthogonality check=0.
+diagvc[{0, 1}]
+Generating matrix: ham_0.1
+hamil={{U/2 + coefzeta[1, 0], Sqrt[2]*gammaPolCh[1], 0}, {Sqrt[2]*gammaPolCh[1], delta, Sqrt[2]*gammaPolCh[1]}, {0, Sqrt[2]*gammaPolCh[1], (4*delta + U - 2*coefzeta[1, 0])/2}}
+dim={3, 3}
+det[vec]=1. 1-abs=0.
+orthogonality check=9.992007221626409*^-16
+diagvc[{0, 3}]
+Generating matrix: ham_0.3
+hamil={{delta}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{1, 2}]
+Generating matrix: ham_1.2
+hamil={{delta + coefzeta[1, 0], -gammaPolCh[1]}, {-gammaPolCh[1], (4*delta + U)/2}}
+dim={2, 2}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{2, 1}]
+Generating matrix: ham_2.1
+hamil={{2*delta + U/2 + coefzeta[1, 0]}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+Lowest energies (absolute):{-0.016477875598917148, -0.008116739538984823, -0.008116739538984822, 0., 0.0004999999999999988, 0.0005, 0.0005, 0.008616739538984822, 0.008616739538984824, 0.016977875598917152}
+Lowest energies (GS shifted):{0., 0.008361136059932325, 0.008361136059932326, 0.016477875598917148, 0.01697787559891715, 0.01697787559891715, 0.01697787559891715, 0.02509461513790197, 0.025094615137901972, 0.033455751197834296}
+Scale factor SCALE(Ninit):1.1547005383792515
+Lowest energies (shifted and scaled):{0., 0.007240956232399522, 0.007240956232399524, 0.014270258869061973, 0.014703271570954192, 0.014703271570954192, 0.014703271570954192, 0.02173257420761664, 0.021732574207616644, 0.028973530440016167}
+makeireducf GENERAL
+Loading module operators.m
+operators.m started
+operators.m done
+Loading module customoperators.m
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m
+Can't load modeloperators.m. Continuing.
+Timing report
+{basis, 0.012974`4.564618887090183}
+{ham, 0.097846`4.663936819264391}
+{maketable, 0.336833`5.978959626845645}
+{xi, 0.830269`6.370763816340009}
+{_, 0}
+data
+"Success!"
+NRG Ljubljana - (c) rok.zitko@ijs.si
+Timestamp: Mon Apr  6 23:18:32 2020
+Compiled on Apr 11 2020 at 18:02:26
+
+[OpenMP] Max. number of threads: 4
+[OpenMP] Number of processors: 4
+[OpenMP] Dynamic thread adjustment: 0
+[OpenMP] Nested parallelism: 0
+
+
+workdir=./dXIpC3
+
+No MPI: single node calculation.
+
+Unused settings: 
+ Tmin=1e-15
+ model=SIAM
+ symtype=QS
+
+Lambda=3 *
+NN1=0
+NN2avg=0
+NN2even=1
+NNtanh=0
+Ninit=0
+T=0.001
+accumulation=0
+alpha=0.29999999999999999
+bandrescale=1
+betabar=1
+bins=1000
+broaden=1
+broaden_max=10
+broaden_min=-99
+broaden_min_ratio=3
+broaden_ratio=1.05
+calc0=1
+cfs=0
+cfsgt=0
+cfsls=0
+checkdiag=0
+checkrho=0
+checksumrules=0
+chitp=1
+chitp_ratio=-999
+data_has_rescaled_energies=1
+diag=dsyev
+diagratio=1
+diagth=1
+discard_immediately=9.9999999999999998e-17
+discard_trim=9.9999999999999998e-17
+discretization=Y *
+dm=0
+dmnrg=0
+dmnrgmats=0
+done=1
+dsyevrlimit=100
+dump_f=0
+dumpabs=0
+dumpannotated=20 *
+dumpdiagonal=0
+dumpenergies=0
+dumpgroups=0 *
+dumpprecision=8
+dumpscaled=1
+dumpsubspaces=0
+emax=-1
+emin=-1
+fdm=0
+fdmexpv=0
+fdmexpvn=0
+fdmgt=0
+fdmls=0
+fdmmats=0
+finite=0
+finitemats=0
+fixeps=1.0000000000000001e-15
+forcestop=-1
+globalB=0
+globalBx=0
+goodE=2
+grouptol=9.9999999999999995e-07
+gtp=0.69999999999999996
+keep=5000 *
+keepenergy=10 *
+keepmin=0
+lastall=0
+lastalloverride=0
+linstep=0
+log=
+logall=0
+logenumber=10
+mats=100
+noimag=1
+omega0=-1
+omega0_ratio=1
+ops=
+pol2x2=0
+polarized=0
+prec_custom=10
+prec_td=10
+prec_xy=10
+preccpp=2000
+reim=0
+removefiles=1
+restart=1
+restartfactor=2
+resume=0
+rungs=0
+safeguard=1.0000000000000001e-05
+safeguardmax=200
+savebins=0
+specchit=
+specd=
+specgt=
+speci1t=
+speci2t=
+specot=
+specq=
+specs=
+spect=
+specv3=
+stopafter=
+strategy=kept
+substeps=0
+tdht=0
+tri=old
+v3mm=0
+v3mmcutoff=9.9999999999999998e-17
+width_custom=16
+width_td=16
+z=1
+zheevrlimit=100
+
+SYMMETRY TYPE: QS
+invdim=2
+0 Q additive
+1 SS additive
+Reading <||||> (e)
+Reading <||||> (z)
+
+length_coef_table=63 Nmax(0)=63
+
+
+length_coef_table=63 Nmax=63
+
+Number of invariant subspaces: 6
+(-2 1) 1 states: 0.014703271570954192 
+(-1 2) 2 states: 0.0072409562323995222 0.02173257420761664 
+(0 1) 3 states: 0 0.014703271570954192 0.028973530440016167 
+(0 3) 1 states: 0.014270258869061973 
+(1 2) 2 states: 0.0072409562323995239 0.021732574207616644 
+(2 1) 1 states: 0.014703271570954192 
+Number of states (multiplicity taken into account): 16
+
+Computing the following operators:
+s=[]
+p=[]
+g=[]
+d=[]
+v=[]
+t=[]
+q=[]
+ot=[]
+
+Computing the following spectra:
+
+Before NRG iteration (N=0)
+
+ ***** [NRG] Iteration 1/63 (scale 0.666667) ***** 
+[1] xi(0)=0.55470019622522915 xi_scaled(0)=0.83205029433784372 zeta(1)=0
+Stats: nr=10 min=1 max=8
+Emax=3.3293290727929241 nrkept=35 nrkeptmult=64 
+Total energy=-1.1095263575976415  Egs=-1.6395727229980865
+Kept: 35 out of 35, ratio=1
+Memory used: 63 MB Time elapsed: 0.002 s
+
+ ***** [NRG] Iteration 2/63 (scale 0.384900) ***** 
+[1] xi(1)=0.34937051739291736 xi_scaled(1)=0.90769123018673858 zeta(2)=0
+Stats: nr=15 min=1 max=20
+Emax=6.8594556910991793 nrkept=126 nrkeptmult=256 
+Total energy=-1.3198528632501412  Egs=-0.5464442909528282
+Kept: 126 out of 126, ratio=1
+Memory used: 63 MB Time elapsed: 0.003 s
+
+ ***** [NRG] Iteration 3/63 (scale 0.222222) ***** 
+[1] xi(2)=0.21448248687942945 xi_scaled(2)=0.96517119095743253 zeta(3)=0
+Stats: nr=21 min=1 max=75
+Safeguard: keep additional 19 states
+Emax=10.602382871160561 nrkept=371 nrkeptmult=832 
+Total energy=-1.6898167067279877  Egs=-1.664837295650309
+Kept: 371 out of 462, ratio=0.803
+Memory used: 63 MB Time elapsed: 0.011 s
+
+ ***** [NRG] Iteration 4/63 (scale 0.128300) ***** 
+[1] xi(3)=0.12674830848806398 xi_scaled(3)=0.98790529533633198 zeta(4)=0
+Stats: nr=28 min=1 max=163
+Safeguard: keep additional 7 states
+Emax=10.287143192669815 nrkept=420 nrkeptmult=976 
+Total energy=-1.7736804484685265  Egs=-0.65365317723351657
+Kept: 420 out of 1376, ratio=0.305
+Memory used: 64 MB Time elapsed: 0.074 s
+
+ ***** [NRG] Iteration 5/63 (scale 0.074074) ***** 
+[1] xi(4)=0.073771324718765879 xi_scaled(4)=0.99591288370333941 zeta(5)=0
+Stats: nr=33 min=1 max=205
+Safeguard: keep additional 3 states
+Emax=10.596833302803109 nrkept=391 nrkeptmult=872 
+Total energy=-1.8962678277800906  Egs=-1.6549296207061155
+Kept: 391 out of 1570, ratio=0.249
+Memory used: 65 MB Time elapsed: 0.157 s
+
+ ***** [NRG] Iteration 6/63 (scale 0.042767) ***** 
+[1] xi(5)=0.042708155679959711 xi_scaled(5)=0.99863138972589616 zeta(6)=0
+Stats: nr=28 min=1 max=175
+Safeguard: keep additional 7 states
+Emax=10.287189090759458 nrkept=420 nrkeptmult=976 
+Total energy=-1.9257444751015509  Egs=-0.68924318576703758
+Kept: 420 out of 1452, ratio=0.289
+Memory used: 65 MB Time elapsed: 0.234 s
+
+ ***** [NRG] Iteration 7/63 (scale 0.024691) ***** 
+[1] xi(6)=0.024680076566138215 xi_scaled(6)=0.99954310092859777 zeta(7)=0
+Stats: nr=33 min=1 max=205
+Safeguard: keep additional 1 states
+Emax=10.602228944180847 nrkept=389 nrkeptmult=874 
+Total energy=-1.9656486813920655  Egs=-1.6161203547658456
+Kept: 389 out of 1570, ratio=0.248
+Memory used: 64 MB Time elapsed: 0.318 s
+
+ ***** [NRG] Iteration 8/63 (scale 0.014256) ***** 
+[1] xi(7)=0.014253389981291475 xi_scaled(7)=0.9998476229214468 zeta(8)=0
+Stats: nr=28 min=1 max=173
+Safeguard: keep additional 7 states
+Emax=10.293986737545039 nrkept=420 nrkeptmult=976 
+Total energy=-1.976023242994482  Egs=-0.72775534596635838
+Kept: 420 out of 1446, ratio=0.29
+Memory used: 64 MB Time elapsed: 0.391 s
+
+ ***** [NRG] Iteration 9/63 (scale 0.008230) ***** 
+[1] xi(8)=0.0082300345599861241 xi_scaled(8)=0.99994919903831425 zeta(9)=0
+Stats: nr=33 min=1 max=205
+Safeguard: keep additional 1 states
+Emax=10.619018060602299 nrkept=389 nrkeptmult=874 
+Total energy=-1.9888347307407359  Egs=-1.5565957611698551
+Kept: 389 out of 1570, ratio=0.248
+Memory used: 65 MB Time elapsed: 0.475 s
+
+ ***** [NRG] Iteration 10/63 (scale 0.004752) ***** 
+[1] xi(9)=0.0047517735966097685 xi_scaled(9)=0.99998306539017889 zeta(10)=0
+Stats: nr=28 min=1 max=173
+Safeguard: keep additional 7 states
+Emax=10.315139627538166 nrkept=420 nrkeptmult=976 
+Total energy=-1.9925354825654453  Egs=-0.7788016576718706
+Kept: 420 out of 1446, ratio=0.29
+Memory used: 64 MB Time elapsed: 0.551 s
+
+ ***** [NRG] Iteration 11/63 (scale 0.002743) ***** 
+[1] xi(10)=0.0027434687380626633 xi_scaled(10)=0.99999435502384071 zeta(11)=0
+Stats: nr=33 min=1 max=205
+Safeguard: keep additional 1 states
+Emax=10.01634029275813 nrkept=377 nrkeptmult=846 
+Total energy=-1.9965939342512251  Egs=-1.4793056394667368
+Kept: 377 out of 1570, ratio=0.24
+Memory used: 65 MB Time elapsed: 0.638 s
+
+ ***** [NRG] Iteration 12/63 (scale 0.001584) ***** 
+[1] xi(11)=0.0015839483753268678 xi_scaled(11)=0.99999811832947794 zeta(12)=0
+Stats: nr=28 min=1 max=170
+Emax=10.380074206687322 nrkept=413 nrkeptmult=963 
+Total energy=-1.9979202004922041  Egs=-0.83731500725782604
+Kept: 413 out of 1404, ratio=0.294
+Memory used: 65 MB Time elapsed: 0.711 s
+
+ ***** [NRG] Iteration 13/63 (scale 0.000914) ***** 
+[1] xi(12)=0.00091449416806143691 xi_scaled(12)=0.99999937277518136 zeta(13)=0
+Stats: nr=33 min=1 max=202
+Emax=10.035195051455547 nrkept=348 nrkeptmult=786 
+Total energy=-1.9991954641449701  Egs=-1.3945008042997136
+Kept: 348 out of 1546, ratio=0.225
+Memory used: 64 MB Time elapsed: 0.798 s
+
+ ***** [NRG] Iteration 14/63 (scale 0.000528) ***** 
+[1] xi(13)=0.00052798367487889256 xi_scaled(13)=0.99999979092491487 zeta(14)=0
+Stats: nr=28 min=1 max=156
+Safeguard: keep additional 2 states
+Emax=10.020323193003041 nrkept=389 nrkeptmult=913 
+Total energy=-1.999667398756996  Egs=-0.89384300274872763
+Kept: 389 out of 1298, ratio=0.3
+Memory used: 65 MB Time elapsed: 0.862 s
+
+ ***** [NRG] Iteration 15/63 (scale 0.000305) ***** 
+[1] xi(14)=0.00030483155930751066 xi_scaled(14)=0.99999993030828893 zeta(15)=0
+Stats: nr=33 min=1 max=192
+Safeguard: keep additional 2 states
+Emax=10.021813001365784 nrkept=311 nrkeptmult=700 
+Total energy=-2.0000667705973045  Egs=-1.3101393221316109
+Kept: 311 out of 1458, ratio=0.213
+Memory used: 66 MB Time elapsed: 0.940 s
+
+ ***** [NRG] Iteration 16/63 (scale 0.000176) ***** 
+[1] xi(15)=0.00017599459100059401 xi_scaled(15)=0.99999997676942776 zeta(16)=0
+Stats: nr=28 min=1 max=139
+Safeguard: keep additional 2 states
+Emax=10.009100504325364 nrkept=280 nrkeptmult=652 
+Total energy=-2.0002345699304409  Egs=-0.95343458162223771
+Kept: 280 out of 1156, ratio=0.242
+Memory used: 66 MB Time elapsed: 0.987 s
+
+ ***** [NRG] Iteration 17/63 (scale 0.000102) ***** 
+[1] xi(16)=0.00010161052606375815 xi_scaled(16)=0.99999999225647584 zeta(17)=0
+Stats: nr=31 min=1 max=145
+Emax=10.144727831459578 nrkept=231 nrkeptmult=532 
+Total energy=-2.0003583221285628  Egs=-1.217907257816135
+Kept: 231 out of 1047, ratio=0.221
+Memory used: 66 MB Time elapsed: 1.024 s
+
+ ***** [NRG] Iteration 18/63 (scale 0.000059) ***** 
+[1] xi(17)=5.8664864878258786e-05 xi_scaled(17)=0.99999999741882539 zeta(18)=0
+Stats: nr=26 min=1 max=106
+Safeguard: keep additional 2 states
+Emax=10.154150883116394 nrkept=219 nrkeptmult=531 
+Total energy=-2.0004190637811914  Egs=-1.0354008757707256
+Kept: 219 out of 864, ratio=0.253
+Memory used: 66 MB Time elapsed: 1.048 s
+
+ ***** [NRG] Iteration 19/63 (scale 0.000034) ***** 
+[1] xi(18)=3.3870175587718958e-05 xi_scaled(18)=0.99999999913960846 zeta(19)=0
+Stats: nr=31 min=1 max=112
+Safeguard: keep additional 1 states
+Emax=10.016965172613252 nrkept=182 nrkeptmult=426 
+Total energy=-2.0004564156916818  Egs=-1.1027964812749929
+Kept: 182 out of 822, ratio=0.221
+Memory used: 66 MB Time elapsed: 1.070 s
+
+ ***** [NRG] Iteration 20/63 (scale 0.000020) ***** 
+[1] xi(19)=1.9554955004286046e-05 xi_scaled(19)=0.99999999971320297 zeta(20)=0
+Stats: nr=26 min=1 max=86
+Safeguard: keep additional 1 states
+Emax=10.067113412186263 nrkept=207 nrkeptmult=505 
+Total energy=-2.0004790128056249  Egs=-1.1555697229503481
+Kept: 207 out of 684, ratio=0.303
+Memory used: 66 MB Time elapsed: 1.084 s
+
+ ***** [NRG] Iteration 21/63 (scale 0.000011) ***** 
+[1] xi(20)=1.1290058537874206e-05 xi_scaled(20)=0.99999999990440114 zeta(21)=0
+Stats: nr=29 min=1 max=106
+Safeguard: keep additional 1 states
+Emax=10.018616139982957 nrkept=176 nrkeptmult=410 
+Total energy=-2.0004898687756509  Egs=-0.96155126111014744
+Kept: 176 out of 781, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.104 s
+
+ ***** [NRG] Iteration 22/63 (scale 0.000007) ***** 
+[1] xi(21)=6.5183183364237354e-06 xi_scaled(21)=0.99999999996813371 zeta(22)=0
+Stats: nr=26 min=1 max=83
+Safeguard: keep additional 2 states
+Emax=10.004617068596325 nrkept=174 nrkeptmult=404 
+Total energy=-2.0004984589231261  Egs=-1.3178471856438236
+Kept: 174 out of 660, ratio=0.264
+Memory used: 66 MB Time elapsed: 1.119 s
+
+ ***** [NRG] Iteration 23/63 (scale 0.000004) ***** 
+[1] xi(22)=3.7633528462778667e-06 xi_scaled(22)=0.99999999998937794 zeta(23)=0
+Stats: nr=27 min=1 max=93
+Emax=10.122957243455364 nrkept=169 nrkeptmult=396 
+Total energy=-2.000501536067659  Egs=-0.81766038390601248
+Kept: 169 out of 651, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.132 s
+
+ ***** [NRG] Iteration 24/63 (scale 0.000002) ***** 
+[1] xi(23)=2.1727727788694568e-06 xi_scaled(23)=0.99999999999645928 zeta(24)=0
+Stats: nr=26 min=1 max=79
+Safeguard: keep additional 1 states
+Emax=10.041386909085618 nrkept=161 nrkeptmult=369 
+Total energy=-2.0005047792375588  Egs=-1.4926410765442752
+Kept: 161 out of 634, ratio=0.254
+Memory used: 66 MB Time elapsed: 1.144 s
+
+ ***** [NRG] Iteration 25/63 (scale 0.000001) ***** 
+[1] xi(24)=1.2544509487711332e-06 xi_scaled(24)=0.99999999999881972 zeta(25)=0
+Stats: nr=27 min=1 max=88
+Safeguard: keep additional 1 states
+Emax=10.042581806054207 nrkept=157 nrkeptmult=358 
+Total energy=-2.0005056743521323  Egs=-0.71355087614088419
+Kept: 157 out of 602, ratio=0.261
+Memory used: 66 MB Time elapsed: 1.157 s
+
+ ***** [NRG] Iteration 26/63 (scale 0.000001) ***** 
+[1] xi(25)=7.2425759295876506e-07 xi_scaled(25)=0.99999999999960665 zeta(26)=0
+Stats: nr=25 min=1 max=73
+Safeguard: keep additional 2 states
+Emax=10.043794246463795 nrkept=131 nrkeptmult=281 
+Total energy=-2.0005068479213817  Egs=-1.6203754860985751
+Kept: 131 out of 586, ratio=0.224
+Memory used: 66 MB Time elapsed: 1.168 s
+
+ ***** [NRG] Iteration 27/63 (scale 0.000000) ***** 
+[1] xi(26)=4.1815031625748309e-07 xi_scaled(26)=0.99999999999986888 zeta(27)=0
+Stats: nr=21 min=1 max=76
+Safeguard: keep additional 2 states
+Emax=10.121496909150192 nrkept=148 nrkeptmult=324 
+Total energy=-2.0005071243162229  Egs=-0.66099397876122368
+Kept: 148 out of 486, ratio=0.305
+Memory used: 66 MB Time elapsed: 1.176 s
+
+ ***** [NRG] Iteration 28/63 (scale 0.000000) ***** 
+[1] xi(27)=2.4141919765300613e-07 xi_scaled(27)=0.99999999999995637 zeta(28)=0
+Stats: nr=25 min=1 max=71
+Safeguard: keep additional 1 states
+Emax=10.166847730813865 nrkept=118 nrkeptmult=244 
+Total energy=-2.00050753072304  Egs=-1.6834072065701167
+Kept: 118 out of 550, ratio=0.215
+Memory used: 66 MB Time elapsed: 1.186 s
+
+ ***** [NRG] Iteration 29/63 (scale 0.000000) ***** 
+[1] xi(28)=1.3938343875251061e-07 xi_scaled(28)=0.99999999999998535 zeta(29)=0
+Stats: nr=21 min=1 max=69
+Emax=10.003242260279068 nrkept=124 nrkeptmult=282 
+Total energy=-2.0005076199292247  Egs=-0.64000562238190861
+Kept: 124 out of 435, ratio=0.285
+Memory used: 66 MB Time elapsed: 1.193 s
+
+ ***** [NRG] Iteration 30/63 (scale 0.000000) ***** 
+[1] xi(29)=8.0473065884338508e-08 xi_scaled(29)=0.99999999999999545 zeta(30)=0
+Stats: nr=25 min=1 max=59
+Safeguard: keep additional 1 states
+Emax=10.145968584838158 nrkept=108 nrkeptmult=220 
+Total energy=-2.0005077573728474  Egs=-1.7079456479373585
+Kept: 108 out of 464, ratio=0.233
+Memory used: 66 MB Time elapsed: 1.201 s
+
+ ***** [NRG] Iteration 31/63 (scale 0.000000) ***** 
+[1] xi(30)=4.6461146250837473e-08 xi_scaled(30)=0.99999999999999845 zeta(31)=0
+Stats: nr=21 min=1 max=63
+Emax=10.121590606941144 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005077867599232  Egs=-0.63250862385831785
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.206 s
+
+ ***** [NRG] Iteration 32/63 (scale 0.000000) ***** 
+[1] xi(31)=2.6824355294779615e-08 xi_scaled(31)=0.99999999999999956 zeta(32)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.440150106413675 nrkept=108 nrkeptmult=220 
+Total energy=-2.00050783280625  Egs=-1.7165865197893939
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.213 s
+
+ ***** [NRG] Iteration 33/63 (scale 0.000000) ***** 
+[1] xi(32)=1.548704875027918e-08 xi_scaled(32)=1 zeta(33)=0
+Stats: nr=21 min=1 max=63
+Emax=10.230735507169538 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005078425622793  Egs=-0.62994760606569222
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.218 s
+
+ ***** [NRG] Iteration 34/63 (scale 0.000000) ***** 
+[1] xi(33)=8.9414517649265433e-09 xi_scaled(33)=1 zeta(34)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.54581514991863 nrkept=108 nrkeptmult=220 
+Total energy=-2.0005078579372935  Egs=-1.7195210083337333
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.224 s
+
+ ***** [NRG] Iteration 35/63 (scale 0.000000) ***** 
+[1] xi(34)=5.1623495834263941e-09 xi_scaled(34)=1 zeta(35)=0
+Stats: nr=21 min=1 max=63
+Emax=10.265859289155651 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005078611848592  Egs=-0.62908676232463234
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.230 s
+
+ ***** [NRG] Iteration 36/63 (scale 0.000000) ***** 
+[1] xi(35)=2.9804839216421811e-09 xi_scaled(35)=1 zeta(36)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.581463658901594 nrkept=108 nrkeptmult=220 
+Total energy=-2.0005078663127978  Egs=-1.7205053049725398
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.239 s
+
+ ***** [NRG] Iteration 37/63 (scale 0.000000) ***** 
+[1] xi(36)=1.7207831944754647e-09 xi_scaled(36)=1 zeta(37)=0
+Stats: nr=21 min=1 max=63
+Emax=10.277532960535032 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005078673948247  Egs=-0.62879900709978398
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.247 s
+
+ ***** [NRG] Iteration 38/63 (scale 0.000000) ***** 
+[1] xi(37)=9.9349464054739364e-10 xi_scaled(37)=1 zeta(38)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.590530957501102 nrkept=108 nrkeptmult=224 
+Total energy=-2.0005078691044642  Egs=-1.7208340866590142
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.253 s
+
+ ***** [NRG] Iteration 39/63 (scale 0.000000) ***** 
+[1] xi(38)=5.7359439815848827e-10 xi_scaled(38)=1.0000000000000002 zeta(39)=0
+Stats: nr=21 min=1 max=61
+Emax=10.281419034877485 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005078694650846  Egs=-0.62870299829387855
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.258 s
+
+ ***** [NRG] Iteration 40/63 (scale 0.000000) ***** 
+[1] xi(39)=3.3116488018246456e-10 xi_scaled(39)=1.0000000000000002 zeta(40)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.592029024609626 nrkept=108 nrkeptmult=224 
+Total energy=-2.0005078700350007  Egs=-1.7209437427808838
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.264 s
+
+ ***** [NRG] Iteration 41/63 (scale 0.000000) ***** 
+[1] xi(40)=1.911981327194961e-10 xi_scaled(40)=1.0000000000000002 zeta(41)=0
+Stats: nr=21 min=1 max=61
+Emax=10.282715331917412 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005078701552015  Egs=-0.62867098476911731
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.269 s
+
+ ***** [NRG] Iteration 42/63 (scale 0.000000) ***** 
+[1] xi(41)=1.1038829339415485e-10 xi_scaled(41)=1 zeta(42)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.592480388108346 nrkept=108 nrkeptmult=224 
+Total energy=-2.0005078703451775  Egs=-1.720980301807528
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.275 s
+
+ ***** [NRG] Iteration 43/63 (scale 0.000000) ***** 
+[1] xi(42)=6.37327109064987e-11 xi_scaled(42)=1 zeta(43)=0
+Stats: nr=21 min=1 max=61
+Emax=10.283147496813752 nrkept=112 nrkeptmult=244 
+Total energy=-2.0005078703852437  Egs=-0.62866031250036203
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.281 s
+
+ ***** [NRG] Iteration 44/63 (scale 0.000000) ***** 
+[1] xi(43)=3.6796097798051622e-11 xi_scaled(43)=1.0000000000000002 zeta(44)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.592627612623501 nrkept=108 nrkeptmult=224 
+Total energy=-2.0005078704485695  Egs=-1.720992489098307
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.286 s
+
+ ***** [NRG] Iteration 45/63 (scale 0.000000) ***** 
+[1] xi(44)=2.12442369688329e-11 xi_scaled(44)=1 zeta(45)=0
+Stats: nr=21 min=1 max=61
+Emax=10.283291547900836 nrkept=112 nrkeptmult=244 
+Total energy=-2.000507870461925  Egs=-0.62865675496082096
+Kept: 112 out of 395, ratio=0.284
+Memory used: 66 MB Time elapsed: 1.292 s
+
+ ***** [NRG] Iteration 46/63 (scale 0.000000) ***** 
+[1] xi(45)=1.2265365932683874e-11 xi_scaled(45)=1 zeta(46)=0
+Stats: nr=25 min=1 max=54
+Safeguard: keep additional 1 states
+Emax=10.592676379677048 nrkept=108 nrkeptmult=224 
+Total energy=-2.0005078704830335  Egs=-1.720996551636381
+Kept: 108 out of 416, ratio=0.26
+Memory used: 66 MB Time elapsed: 1.297 s
+
+ ***** [NRG] Iteration 47/63 (scale 0.000000) ***** 
+[1] xi(46)=7.0814123229442994e-12 xi_scaled(46)=1 zeta(47)=0
+Stats: nr=21 min=1 max=61
+Safeguard: keep additional 27 states
+Emax=10.283369831360663 nrkept=139 nrkeptmult=304 
+Total energy=-2.000507870487485  Egs=-0.62865556910378895
+Kept: 139 out of 395, ratio=0.352
+Memory used: 66 MB Time elapsed: 1.303 s
+
+ ***** [NRG] Iteration 48/63 (scale 0.000000) ***** 
+[1] xi(47)=4.0884553108946244e-12 xi_scaled(47)=1 zeta(48)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592564158839579 nrkept=116 nrkeptmult=240 
+Total energy=-2.0005078704945212  Egs=-1.7209979059513445
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.312 s
+
+ ***** [NRG] Iteration 49/63 (scale 0.000000) ***** 
+[1] xi(48)=2.3604707743147665e-12 xi_scaled(48)=1 zeta(49)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.28337305181917 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078704960049  Egs=-0.6286551737918703
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.318 s
+
+ ***** [NRG] Iteration 50/63 (scale 0.000000) ***** 
+[1] xi(49)=1.3628184369648749e-12 xi_scaled(49)=1.0000000000000002 zeta(50)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592568071868236 nrkept=116 nrkeptmult=240 
+Total energy=-2.0005078704983501  Egs=-1.7209983573207739
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.325 s
+
+ ***** [NRG] Iteration 51/63 (scale 0.000000) ***** 
+[1] xi(50)=7.8682359143825549e-13 xi_scaled(50)=1 zeta(51)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.28337479791209 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078704988448  Egs=-0.62865504203883404
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.331 s
+
+ ***** [NRG] Iteration 52/63 (scale 0.000000) ***** 
+[1] xi(51)=4.5427281232162494e-13 xi_scaled(51)=1 zeta(52)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592569459540336 nrkept=116 nrkeptmult=240 
+Total energy=-2.0005078704996264  Egs=-1.7209985077788692
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.339 s
+
+ ***** [NRG] Iteration 53/63 (scale 0.000000) ***** 
+[1] xi(52)=2.622745304794185e-13 xi_scaled(52)=1 zeta(53)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.283375785843273 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078704997912  Egs=-0.62865499812206549
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.347 s
+
+ ***** [NRG] Iteration 54/63 (scale 0.000000) ***** 
+[1] xi(53)=1.5142427077387497e-13 xi_scaled(53)=1 zeta(54)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592569931977176 nrkept=116 nrkeptmult=240 
+Total energy=-2.0005078705000519  Egs=-1.7209985579311766
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.355 s
+
+ ***** [NRG] Iteration 55/63 (scale 0.000000) ***** 
+[1] xi(54)=8.7424843493139495e-14 xi_scaled(54)=1 zeta(55)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.283376116111532 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078705001069  Egs=-0.62865498348329141
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.361 s
+
+ ***** [NRG] Iteration 56/63 (scale 0.000000) ***** 
+[1] xi(55)=5.0474756924624991e-14 xi_scaled(55)=1 zeta(56)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.5925700905585 nrkept=116 nrkeptmult=240 
+Total energy=-2.000507870500194  Egs=-1.7209985746484777
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.369 s
+
+ ***** [NRG] Iteration 57/63 (scale 0.000000) ***** 
+[1] xi(56)=2.9141614497713167e-14 xi_scaled(56)=1.0000000000000002 zeta(57)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.283376226299188 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078705002122  Egs=-0.62865497860373942
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.375 s
+
+ ***** [NRG] Iteration 58/63 (scale 0.000000) ***** 
+[1] xi(57)=1.6824918974874997e-14 xi_scaled(57)=1 zeta(58)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592570143541012 nrkept=116 nrkeptmult=240 
+Total energy=-2.000507870500241  Egs=-1.7209985802208647
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.383 s
+
+ ***** [NRG] Iteration 59/63 (scale 0.000000) ***** 
+[1] xi(58)=9.7138714992377229e-15 xi_scaled(58)=1.0000000000000002 zeta(59)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.283376263038814 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078705002473  Egs=-0.62865497697724315
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.389 s
+
+ ***** [NRG] Iteration 60/63 (scale 0.000000) ***** 
+[1] xi(59)=5.6083063249583328e-15 xi_scaled(59)=1.0000000000000002 zeta(60)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592570161215264 nrkept=116 nrkeptmult=240 
+Total energy=-2.000507870500257  Egs=-1.7209985820783087
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.397 s
+
+ ***** [NRG] Iteration 61/63 (scale 0.000000) ***** 
+[1] xi(60)=3.2379571664125742e-15 xi_scaled(60)=1 zeta(61)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.283376275286434 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078705002592  Egs=-0.62865497643508084
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.403 s
+
+ ***** [NRG] Iteration 62/63 (scale 0.000000) ***** 
+[1] xi(61)=1.8694354416527775e-15 xi_scaled(61)=1 zeta(62)=0
+Stats: nr=25 min=1 max=66
+Safeguard: keep additional 9 states
+Emax=10.592570167108146 nrkept=116 nrkeptmult=240 
+Total energy=-2.0005078705002624  Egs=-1.7209985826974512
+Kept: 116 out of 516, ratio=0.225
+Memory used: 66 MB Time elapsed: 1.412 s
+
+ ***** [NRG] Iteration 63/63 (scale 0.000000) ***** 
+[1] xi(62)=1.079319055470858e-15 xi_scaled(62)=1 zeta(63)=0
+Stats: nr=21 min=1 max=67
+Safeguard: keep additional 27 states
+Emax=10.283376279369051 nrkept=139 nrkeptmult=304 
+Total energy=-2.0005078705002632  Egs=-0.62865497625436029
+Kept: 139 out of 427, ratio=0.326
+Memory used: 66 MB Time elapsed: 1.418 s
+
+** Iteration completed.
+
+
+Total energy: -2.0005078705002632
+TKW=2.1982020151386328e-06
+
+Memory usage report [0]
+===================
+        diag: 67740 kB
+      recalc: 67740 kB
+       split: 67740 kB
+        trim: 67740 kB
+       trunc: 67740 kB
+
+Peak usage: 67740 kB
+
+Timing report [0]
+=============
+         All: 1.418 s
+        diag: 1.213 s
+    recalc f: 0.023 s
+       Other: 0.182 s

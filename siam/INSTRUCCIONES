@@ -1,0 +1,57 @@
+|| GENERAL ||
+
+- A menos que se indique lo contrario o haya que hacer algo raro,
+	(i) el único documento que hay que modificar a mano es 'param', y
+	(ii) todos los cálculos se hacen desde la carpeta 'imp' ('ref' se modifica automáticamente).
+
+- Para cálculos con z-averaging, usar 'discretization=Z' en param.	
+	
+
+
+|| GRÁFICOS TERMODINÁMICOS ||
+
+1. Dependiendo de si se quiere hacer un cálculo normal o con Z-averaging, ejecutar [1a] o [1b].
+	* [1b] requiere como argumento la cantidad de puntos intermedios entre z=0 y z=1 con los que se quiere hacer 
+	  el z-averaging (un valor estándar es N=4; no se aplica por defecto).
+
+2. Usar [2x] para hacer gráficos.
+	a) Sin argumento: se muestra el gráfico en pantalla.
+	b) Con argumento: se guarda el gráfico con el nombre igual al argumento (el argumento tiene que terminar por '.png' 
+		u otra extensión válida).
+		* Este punto (b) vale para todos los scripts de ploteo.
+
+
+|| GRÁFICOS DE FLUJO DE AUTOVALORES ||
+
+1. Ejecutar [1c].
+
+2.1. Para hacer un gráfico con los autovalores más bajos de los subespacios de H_0, ejecutar [3a]
+	* N (pasos de NRG) serán par.
+
+2.2. Para hacer un gráfico con los autovalores de un subespacio concreto o de dos subespacios, ejecutar [3b] o [3c].
+	- Como argumentos hay que dar
+		a) Para [3b], LETRA NÚMERO1 NÚMERO2
+		b) Para [3c], LETRA NÚMERO1 NÚMERO2 NÚMERO3 NÚMERO4
+	- El código es:
+		LETRA: 'o' (odd) o 'e' (even) dependiendo de qué valores de N se quieran plotear
+		NÚMERO1 y NÚMERO3: el valor de Q (carga) del subespacio (Q=0,1,2,...)
+		NÚMERO2 y NÚMERO4: el valor de S (spin) del subespacio, siguiendo la convención
+					S=0.0 -> NÚMERO=1
+					S=1/2 -> NÚMERO=2
+					S=1   -> NÚMERO=3
+					... 
+		* Si la combinación letra-subespacio no es legal, el script fallará.
+
+
+|| DIAGRAMAS DE FLUJO EN ESPACIO U-GAMMA ||
+
+* Asegurarse de que Lambda=2.5 en 'param'
+
+A. Para un diagrama para un solo flujo (un par U,G):
+	1. Ejecutar [1c]
+	2. Ejecutar [4a]
+
+B. Para un diagrama con múltiples flujos:
+	1. Abrir [4b] y editar la serie de valores U,G (los que están puestos dan un gráfico bonito).
+	2. Ejecutar [4b].
+

@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+
+import numpy as np
+import matplotlib.pyplot as plt
+import sys
+import py_functions as pf
+
+arguments = []
+for arg in sys.argv[1:]:
+    arguments.append(arg)
+
+OUTNAME = 0
+if len(arguments) > 0:
+    OUTNAME = arguments[0] 
+
+
+F_Q0S1 = "e-q0s1_table1.dat"
+F_Q0S3 = "e-q0s3_table1.dat"
+F_Q1S2 = "e-q1s2_table1.dat"
+F_Q2S1 = "e-q2s1_table1.dat"
+
+
+plt.style.use('seaborn-paper')
+fig = plt.figure()
+ax = fig.add_axes([ 0.15 , 0.15 , 0.8 , 0.75 ])
+
+ax.spines['top'].set_visible( False )
+
+steps = np.arange( 0 , pf.get_N( 'e-q0s1_table1.dat' ) , 2 )
+
+f1 = open( F_Q0S1 , 'r' )
+eigenvalues = np.empty( ( np.size(steps) , 3 ) )
+pf.plotfile( f1 , steps , eigenvalues , ax , color='tab:blue' , label='Q=0, S=0' , linestyle='-' )
+f1.close()
+
+f2 = open( F_Q0S3 , 'r' )
+eigenvalues = np.empty(( np.size(steps) , 1 ))
+pf.plotfile( f2 , steps , eigenvalues , ax , color='tab:green' , label='Q=0, S=1' , linestyle='--')
+f2.close()
+
+f3 = open( F_Q1S2 , 'r' )
+eigenvalues = np.empty(( np.size(steps) , 2 ))
+pf.plotfile( f3 , steps , eigenvalues , ax , color='tab:orange' , label='Q=1, S=1/2' , linestyle=':')
+f3.close()
+
+
+f4 = open( F_Q2S1 , 'r' )
+eigenvalues = np.empty(( np.size(steps) , 1 ))
+pf.plotfile( f4 , steps , eigenvalues , ax , color='tab:brown' , label='Q=2, S=0' , linestyle='-.' ) 
+f4.close()
+
+ax.legend(loc='upper left',frameon=True,framealpha=0.8,facecolor='white',edgecolor='white',fontsize=15,ncol=2)
+
+pf.label_flowplot( 70 , 1 , ax )
+
+ylims = [ -0.2 , 3 ]
+yticks = np.arange( 0 , 4 , 0.5 )
+ax.set_ylim( ylims )
+ax.set_xlim([ -5 , 85 ])
+ax.set_yticks( yticks )
+ax.set_xticks( np.arange( 0 , 90 , 20 ) )
+ax.tick_params( labelsize=15 )
+
+twin = ax.twinx()
+twin.set_ylim( ylims )
+twin.set_yticks( yticks  )
+twin.set_yticklabels([])
+
+ax.spines['top'].set_visible(False)
+twin.spines['top'].set_visible(False)
+
+if OUTNAME!=0:
+    plt.savefig(OUTNAME)
+else:
+    plt.show()

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./0a_run
+
+./99_f_extract_h0

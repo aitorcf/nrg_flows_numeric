@@ -1,0 +1,11 @@
+[param]
+symtype=QS
+discretization=Z
+Lambda=2.5
+Tmin=1e-15
+keepenergy=10
+keep=5000
+
+model=CLEAN
+
+ops=SZ2f0 s^2 n_f

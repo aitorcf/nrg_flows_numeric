@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+$Gamma = `getparam Gamma`;
+$U = `getparam U`;
+
+chomp($Gamma,$U);
+
+$scalex = 1/$U;
+$scaley = 3.14159 * $Gamma;
+
+system "scalexy $scalex $scaley spec_FDM_dens_A_d-A_d.dat >A-rescaled.dat";

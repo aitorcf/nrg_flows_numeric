@@ -1,0 +1,14 @@
+
+ops=A_d
+specd=A_d-A_d
+
+broaden_max=0.1
+broaden_min=1e-7
+broaden_ratio=1.02
+
+fdm=true
+T=1e-6
+
+smooth=new
+alpha=0.6
+omega0=1e-99
