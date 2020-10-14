@@ -15,8 +15,9 @@ eigfile=OpenWrite["m_eigenvalues.dat"]
 U=ToExpression[$ScriptCommandLine[[2]]]
 \[CapitalGamma]=ToExpression[$ScriptCommandLine[[3]]]
 
-U = (  2.0  /  ( 1 + 2.5^-1 )  ) * U / 2.0
-\[CapitalGamma] = (  2.0  /  ( 1 + 2.5^-1 )  )^2 * 2.0 * \[CapitalGamma] / \[Pi]
+\[CapitalLambda] = 2.5
+U = (  2.0  /  ( 1 + \[CapitalLambda]^-1 )  ) * U / 2.0
+\[CapitalGamma] = (  2.0  /  ( 1 + \[CapitalLambda]^-1 )  )^2 * 2.0 * \[CapitalGamma] / \[Pi]
 
 Hd=U pow[number[d[]]-1,2];
 Hdf=Sqrt[\[CapitalGamma]] hop[d[],f[]];
@@ -25,13 +26,16 @@ basisops={d[],f[]};
 diagSetupBasisQS[];
 diagSetupHam[];
 diagonalize[{}];
-eigenvalues=( scale * (eig2[[All,2,1]]-Min[Flatten@eig2[[All,2,1]]]) )//N;
+eigenvalues=N[( scale * (eig2[[All,2,1]]-Min[Flatten@eig2[[All,2,1]]]) ),64]
 
 Do[
 	eigenvalues[[i]]=Sort[ eigenvalues[[i]] ],
 	{i,Length@eigenvalues}]
 
-eigenvalues=Flatten@Table[eigenvalues[[i]],{i,Quotient[Length@eigenvalues,2],Length@eigenvalues}];
+Print["------------------"]
+eigenvalues=Flatten@Table[eigenvalues[[i]],{i,Quotient[Length@eigenvalues,2],Length@eigenvalues}];Print@eigenvalues
+eigenvalues = Table[ToString[eigenvalues[[i]],FortranForm],{i,Length@eigenvalues}]; Print@eigenvalues
+Print["------------------"]
 
 Do[
 	WriteLine[ eigfile , eigenvalues[[i]] ],

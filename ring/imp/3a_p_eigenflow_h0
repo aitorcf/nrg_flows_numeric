@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+
+import numpy as np
+import matplotlib.pyplot as plt
+import sys
+import py_functions as pf
+import matplotlib.colors as mcolors
+
+arguments = []
+for arg in sys.argv[1:]:
+    arguments.append(arg)
+
+OUTNAME = 0
+if len(arguments) > 0:
+    OUTNAME = arguments[0] 
+
+
+F_Q0S2 = "e-q0s2_table1.dat"
+F_Q0S4 = "e-q0s4_table1.dat"
+F_Q1S1 = "e-q1s1_table1.dat"
+F_Q1S3 = "e-q1s3_table1.dat"
+F_Q2S2 = "e-q2s2_table1.dat"
+F_Q3S1 = "e-q3s1_table1.dat"
+
+
+plt.style.use('seaborn-paper')
+fig, ax = plt.subplots()
+plt.grid(  b=True, which='major', color='black', linewidth='0.4' , alpha=0.3)
+
+N = pf.get_N( 'e-q0s2_table1.dat' )
+
+steps = np.arange(0,N,2)
+
+
+f1 = open(F_Q0S2,'r')
+eigenvalues = np.empty( (np.size(steps),8) )
+pf.plotfile(f1,steps,eigenvalues,ax,label='Q=0, S=1/2',color='tab:blue')
+f1.close()
+
+f2 = open(F_Q0S4,'r')
+eigenvalues = np.empty( (np.size(steps),1) )
+pf.plotfile(f2,steps,eigenvalues,ax,label='Q=0, S=3/2',color='tab:orange')
+f2.close()
+
+f3 = open(F_Q1S1,'r')
+eigenvalues = np.empty( (np.size(steps),6) )
+pf.plotfile(f3,steps,eigenvalues,ax,label='Q=1, S=0',color='tab:green')
+f3.close()
+
+f4 = open(F_Q1S3,'r')
+eigenvalues = np.empty( (np.size(steps),3) )
+pf.plotfile(f4,steps,eigenvalues,ax,label='Q=1, S=1',color='tab:red')
+f4.close()
+
+f5 = open(F_Q2S2,'r')
+eigenvalues = np.empty( (np.size(steps),3) )
+pf.plotfile(f5,steps,eigenvalues,ax,label='Q=2, S=1',color='tab:purple')
+f5.close()
+
+f6 = open(F_Q3S1,'r')
+eigenvalues = np.empty( (np.size(steps),1) )
+pf.plotfile(f6,steps,eigenvalues,ax,label='Q=3, S=0',color='tab:brown')
+f6.close()
+
+ax.legend(loc='upper left',frameon=True,framealpha=0.7,facecolor='white',edgecolor='white')
+ax.set_title('Flow of eigenvalues present in {}'.format(r'$H_0$'))
+ax.set_ylim([-0.5,8])
+pf.label_flowplot(N,1,ax)
+
+if OUTNAME!=0:
+    plt.savefig(OUTNAME)
+else:
+    plt.show()

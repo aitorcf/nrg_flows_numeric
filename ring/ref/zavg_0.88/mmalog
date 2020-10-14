@@ -1,0 +1,225 @@
+NRG Ljubljana 2020.03 (c) Rok Zitko, rok.zitko@ijs.si, 2005-2019
+Mathematica version: 12.1.0 for Linux x86 (64-bit) (March 18, 2020)
+sneg version: 1.251
+Loading module initialparse.m
+Options: {}
+def1ch, NRDOTS=0
+H0=coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]])
+Loading module models.m
+models started
+Loading module custommodels.m
+Can't load custommodels.m. Continuing.
+NRDOTS:0 CHANNELS:1 COEFCHANNELS:1
+basis:{f[0]}
+Hamiltonian generated. -coefzeta[1, 0] + coefzeta[1, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]]
+H-conj[H]=0
+SCALE[0]=1.1609953011294531
+faktor=1.3618821958590253
+Generating basis
+Wilson chain
+Tmin=1.*^-15
+Tmin=1.*^-15 ==> Nmax=75
+DISCNMAX=75
+Discretization checksum [-1] (channel 1): 9.13694880651151620808188176734249008`10.*^-61
+BAND="flat" thetaCh={"2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+0.5622596298
+0.420843025
+0.2856719641
+0.1827851775
+0.1165037351
+0.07403827895
+0.04692562416
+0.02970415566
+0.01879312393
+0.01188748045
+0.007518724454
+0.004755365594
+0.003007584279
+0.001902170147
+0.001203039761
+0.0007608695891
+0.0004812162914
+0.0003043479336
+0.0001924865413
+0.0001217391797
+0.00007699461812
+0.00004869567228
+0.00003079784735
+0.00001947826894
+0.00001231913895
+7.791307577e-6
+4.927655579e-6
+3.116523031e-6
+1.971062231e-6
+1.246609212e-6
+7.884248926e-7
+4.986436849e-7
+3.15369957e-7
+1.99457474e-7
+1.261479828e-7
+7.978298959e-8
+5.045919313e-8
+3.191319583e-8
+2.018367725e-8
+1.276527833e-8
+8.0734709e-9
+5.106111334e-9
+3.22938836e-9
+2.042444533e-9
+1.291755344e-9
+8.169778134e-10
+5.167021376e-10
+3.267911253e-10
+2.06680855e-10
+1.307164501e-10
+8.267234202e-11
+5.228658006e-11
+3.306893681e-11
+2.091463202e-11
+1.322757472e-11
+8.365852809e-12
+5.291029889e-12
+3.346341124e-12
+2.116411956e-12
+1.338536449e-12
+8.465647823e-13
+5.354145798e-13
+3.386259129e-13
+2.141658319e-13
+1.354503652e-13
+8.566633276e-14
+5.418014606e-14
+3.426653311e-14
+2.167205843e-14
+1.370661324e-14
+8.66882337e-15
+5.482645297e-15
+3.467529348e-15
+2.193058119e-15
+1.387011739e-15
+8.772232475e-16
+"zetatable" (channel 1)
+0.e-999
+0.e-998
+0.e-997
+0.e-997
+0.e-996
+0.e-995
+0.e-994
+0.e-993
+0.e-992
+0.e-991
+0.e-991
+0.e-990
+0.e-989
+0.e-988
+0.e-987
+0.e-986
+0.e-985
+0.e-985
+0.e-984
+0.e-983
+0.e-982
+0.e-981
+0.e-980
+0.e-979
+0.e-978
+0.e-978
+0.e-977
+0.e-976
+0.e-975
+0.e-974
+0.e-973
+0.e-972
+0.e-972
+0.e-971
+0.e-970
+0.e-969
+0.e-968
+0.e-967
+0.e-966
+0.e-965
+0.e-965
+0.e-964
+0.e-963
+0.e-962
+0.e-961
+0.e-960
+0.e-959
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-953
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-946
+0.e-945
+0.e-944
+0.e-943
+0.e-942
+0.e-941
+0.e-940
+0.e-940
+0.e-939
+0.e-938
+0.e-937
+0.e-936
+0.e-920
+0.e-891
+Precision last xi:861.5269703947689
+Precision last zeta: 0.
+Discretization done.
+thetaCh={"2."}
+theta0Ch={"0.2"}
+gammaPolCh={"0.252313252202016"}
+checkdefinitions[] -> 0.
+calcgsenergy[]
+diagvc[{-1, 1}]
+Generating matrix: ham_-1.1
+hamil={{-coefzeta[1, 0]}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{0, 2}]
+Generating matrix: ham_0.2
+hamil={{0}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{1, 1}]
+Generating matrix: ham_1.1
+hamil={{coefzeta[1, 0]}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+Lowest energies (absolute):{0., 0., 0.}
+Lowest energies (GS shifted):{0., 0., 0.}
+Scale factor SCALE(Ninit):1.1609953011294531
+Lowest energies (shifted and scaled):{0., 0., 0.}
+makeireducf GENERAL
+Loading module operators.m
+operators.m started
+operators.m done
+Loading module customoperators.m
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m
+Can't load modeloperators.m. Continuing.
+Timing report
+{basis, 0.001334`3.576700823076503}
+{ham, 0.0034869999999999999`3.5168756861522863}
+{maketable, 0.216665`5.787333754679533}
+{xi, 1.136027`6.506933646888283}
+{_, 0}
+data
+"Success!"

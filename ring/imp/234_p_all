@@ -1,0 +1,9 @@
+#!/bin/bash
+
+./2d_p_mag_entr.py &
+./2g_p_occupations.py &
+./2h_p_spins.py &
+
+./3d_p_eigenflow_h0_lowest.py &
+
+./4b_p_arrowflow_sneg_l_fp-l2.5

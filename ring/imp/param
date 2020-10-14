@@ -1,0 +1,18 @@
+[extra]
+U=1e-2
+Gamma=1e-5
+delta=0
+
+[param]
+symtype=QS
+discretization=Z
+Lambda=2.5
+Tmin=1e-20
+keepenergy=10
+keep=10000
+keepmin=1200
+model=./dqd.m
+
+ops=n_d n_a n_f s^2 SaSa SaSd SaSf SZ2f0
+dumpannotated=200
+dumpgroups=false

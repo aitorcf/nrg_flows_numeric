@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import subprocess
 import os
 import numpy as np
@@ -489,7 +490,7 @@ def plot_arrow_diagram( ax , colour='black' , fixedpoints=False ):
     def F(in_array):
         U = in_array[0]
         GAMMA = in_array[1]
-
+        
         analytic_eigenvalues = compute_h0_eigenvalues_abs( U , GAMMA )
 
         return analytic_eigenvalues - nrg_eigenvalues_step
@@ -529,25 +530,13 @@ def plot_arrow_diagram_WM( ax , colour='black' , fixedpoints=False ):
     def F(in_array):
         U = in_array[0]
         GAMMA = in_array[1]
+
+        U_for_wm = "{:.20f}".format( in_array[0] )
+        G_for_wm = "{:.20f}".format( in_array[1] )
+
+        subprocess.call([ 'wolframscript' ,  'compute_eigenvalues.wls' , f'{U_for_wm}' , f'{G_for_wm}' ])
+        analytic_eigenvalues_WM = np.array( list( np.loadtxt( "m_eigenvalues.dat" ) ) )
         
-        subprocess.call([ 'wolframscript' ,  'compute_eigenvalues.wls' , f'{U}' , f'{GAMMA}' ])
-        
-        analytic_eigenvalues_WM = []
-        with open( 'm_eigenvalues.dat' ) as f:
-            for line in f:
-                analytic_eigenvalues_WM.append( float( line.strip() ) )
-        analytic_eigenvalues_WM = np.array( analytic_eigenvalues_WM )
-        analytic_eigenvalues = compute_h0_eigenvalues_abs( U , GAMMA )
-        
-        print( "EIGENVALUE COMPARISON" )
-        print( "Python eigenvalues:" )
-        print( analytic_eigenvalues )
-        print( "Mathematica eigenvalues:" )
-        print( analytic_eigenvalues_WM  )
-        print( "NRG eigenvalues:" )
-        print( nrg_eigenvalues_step  )
-        print( "\n" )
-         
         return analytic_eigenvalues_WM - nrg_eigenvalues_step
 
     U_array = np.empty( int(N/2) )
@@ -558,10 +547,11 @@ def plot_arrow_diagram_WM( ax , colour='black' , fixedpoints=False ):
     for n in range(0,int(N/2)):
         nrg_eigenvalues_step = nrg_eigenvalues[ n , : ]
 
-        res = opt.least_squares( F , [0.15,0.15] , bounds=([0,0],[50,50]))
+        res = opt.least_squares( F , [0.15,0.15] , bounds=([0,0],[5,5]) )
         
         U_array[n] = res.x[0]
         GAMMA_array[n] = res.x[1]
+
         errors.write( f"step {2*n}:\ncost = {res.cost}\noptimality = {res.optimality}\nresiduals = {res.fun}\n\n" )
         points.write( f"{U_array[n]} {GAMMA_array[n]}\n" )
     errors.close()
