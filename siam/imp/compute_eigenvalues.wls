@@ -32,10 +32,10 @@ Do[
 	eigenvalues[[i]]=Sort[ eigenvalues[[i]] ],
 	{i,Length@eigenvalues}]
 
-Print["------------------"]
-eigenvalues=Flatten@Table[eigenvalues[[i]],{i,Quotient[Length@eigenvalues,2],Length@eigenvalues}];Print@eigenvalues
-eigenvalues = Table[ToString[eigenvalues[[i]],FortranForm],{i,Length@eigenvalues}]; Print@eigenvalues
-Print["------------------"]
+
+eigenvalues=Flatten@Table[eigenvalues[[i]],{i,Quotient[Length@eigenvalues,2],Length@eigenvalues}];
+eigenvalues = Table[ToString[eigenvalues[[i]],FortranForm],{i,Length@eigenvalues}];
+
 
 Do[
 	WriteLine[ eigfile , eigenvalues[[i]] ],

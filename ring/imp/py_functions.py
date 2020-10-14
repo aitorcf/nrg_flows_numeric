@@ -736,6 +736,28 @@ def plot_arrows( U_array , GAMMA_array , ax , colour='tab:blue' , fixedpoints=Fa
     
     if fixedpoints: include_fixedpoints( ax , multi=multi )
 
+
+def plot_arrows_3d( U_array , Gd_array , Ga_array , ax , colour='black' , fixedpoints=False , multi=False ):
+    ax.quiver( Gd_array[:-1] , Ga_array[:-1] , U_array[:-1] , Gd_array[1:]-Gd_array[:-1], Ga_array[1:]-Ga_array[:-1], U_array[1:]-U_array[:-1], \
+        #scale_units='xy', angles='xy', scale=1,  width=0.005, 
+        color=colour)
+    
+    ax.set_xlabel( '$ \Gamma^d_{eff} $' , fontsize=15 )
+    ax.set_ylabel( '$ \Gamma^a_{eff} $' , fontsize=15 )
+    ax.set_zlabel('$ U_{eff} $' , fontsize=15 )
+    ax.tick_params( labelsize=15 )
+
+    #x_lim = 1.6 if multi else 1.3
+    #y_lim = 7.0
+    
+    #ax.set_xlim([-0.025,x_lim])
+    #ax.set_ylim([-0.1,y_lim])
+    
+    #ax.set_xticks( np.arange( 0 , x_lim+0.1 , 0.2 ) )
+    #ax.set_yticks( np.arange( -3.0 , y_lim+0.1 , 1 ) )
+    
+    #if fixedpoints: include_fixedpoints( ax , multi=multi )
+
 def include_fixedpoints( ax , multi=False ):
     fo = [ 0 , 0 ]
     ps = [ 0.94 , 2.38 ]
