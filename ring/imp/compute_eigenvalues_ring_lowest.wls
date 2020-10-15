@@ -6,7 +6,7 @@
 Import["../../diagonalize.m"]
 
 snegfermionoperators[d,a,f]
-snegrealconstants[U,\[CapitalGamma]d,\[CapitalGamma]a]
+snegrealconstants[Ud,Ua,\[CapitalGamma]d,\[CapitalGamma]a]
 
 
 (* Constants and parameters *)
@@ -14,15 +14,16 @@ snegrealconstants[U,\[CapitalGamma]d,\[CapitalGamma]a]
 \[CapitalLambda] = 2.5;
 scale = ( 1 + \[CapitalLambda]^-1 ) / 2.0;
 
-u = scale^-1 * N@ToExpression@$ScriptCommandLine[[2]]
-\[Gamma]d = scale^-2 * N@2 * ToExpression@$ScriptCommandLine[[3]] / \[Pi]
-\[Gamma]a = scale^-2 * 2 * N@ToExpression@$ScriptCommandLine[[4]] / \[Pi] 
+ud = N[ 0.5 * scale^-1 * ToExpression@$ScriptCommandLine[[2]] , 50 ]
+ua = N[ 0.5 * scale^-1 * ToExpression@$ScriptCommandLine[[3]] , 50 ]
+\[Gamma]d = N[ scale^-2 * 2 * ToExpression@$ScriptCommandLine[[4]] / \[Pi] , 50 ]
+\[Gamma]a = N[ scale^-2 * 2 * ToExpression@$ScriptCommandLine[[5]] / \[Pi] , 50 ]
 
 
 (* Hamiltonian definition *)
 
-Hd = U pow[ number[d[]]-1 , 2 ]
-Ha = U pow[ number[a[]]-1 , 2 ]
+Hd = Ud pow[ number[d[]]-1 , 2 ]
+Ha = Ua pow[ number[a[]]-1 , 2 ]
 
 Hdf = Sqrt[\[CapitalGamma]d] hop[ d[] , f[] ]
 Haf = Sqrt[\[CapitalGamma]a] hop[ a[] , f[] ]
@@ -35,12 +36,12 @@ H = Hd + Ha + Hdf + Haf
 basisops = { a[] , d[] , f[] };
 diagSetupBasisQS[];
 diagSetupHam[];
-diagonalize[{U->u,\[CapitalGamma]d->\[Gamma]d,\[CapitalGamma]a->\[Gamma]a}];
+diagonalize[{Ud->ud,Ua->ua,\[CapitalGamma]d->\[Gamma]d,\[CapitalGamma]a->\[Gamma]a}];
 
 
 (* Setup of the relevant eigenvalue array *)
 
-eigenvalues = N[ scale * (eig2[[All,2,1]]-Min[Flatten@eig2[[All,2,1]]]) ];
+eigenvalues = N[ scale * (eig2[[All,2,1]]-Min[Flatten@eig2[[All,2,1]]]) , 50 ];
 
 Do[
 	eigenvalues[[i]]=Min[ eigenvalues[[i]] ],
@@ -59,7 +60,3 @@ Do[
 	{i,Length@eigenvalues}]
 	
 Close[ eigfile ]
-
-
-
-

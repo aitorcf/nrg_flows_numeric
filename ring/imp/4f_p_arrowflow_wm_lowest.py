@@ -11,28 +11,29 @@ import subprocess
 
 
 N = pf.get_N('e-q0s2_table1.dat')
-U_param, GAMMA_param = pf.get_u_gamma()
 
+f = open( '4d_arrowflow.dat' , 'w' )
 
 def F(in_array):
-    U = "{:20f}".format( in_array[0] )
-    Gd = "{:20f}".format( in_array[1] )
-    Ga = "{:20f}".format( in_array[2] )
+    Ud = "{:.50f}".format( in_array[0] )
+    Ua = "{:.50f}".format( in_array[1] )
+    Gd = "{:.50f}".format( in_array[2] )
+    Ga = "{:.50f}".format( in_array[3] )
 
-    if not float(Gd) > float(Ga): Gd , Ga = ( Ga , Gd )
+    #if not float(Gd)+0.0001 > float(Ga): return 1000*np.ones(6)
     
-    print( f"#####\nU = {U}\nGd = {Gd}\nGa = {Ga}\n#####" )
+    print( f"#####\nUd = {Ud}\nUa = {Ua}\nGd = {Gd}\nGa = {Ga}\n#####" )
 
-    subprocess.call([ 'wolframscript' , 'compute_eigenvalues_ring_lowest.wls' , f"{U}" , f"{Gd}" , f"{Ga}" ])
+    subprocess.call([ 'wolframscript' , 'compute_eigenvalues_ring_lowest.wls' , f"{Ud}" , f"{Ua}" , f"{Gd}" , f"{Ga}" ])
     analytic_eigenvalues = np.loadtxt( 'm_eigenvalues_lowest.dat' )
 
     out_array = nrg_eigenvalues_step - analytic_eigenvalues
-    print( out_array )
 
     return out_array
 
 
-U_array = np.empty( int(N/2) )
+Ud_array = np.empty( int(N/2) )
+Ua_array = np.empty( int(N/2) )
 Gd_array = np.empty( int(N/2) )
 Ga_array = np.empty( int(N/2) )
 
@@ -42,19 +43,25 @@ nrg_eigenvalues_step = np.empty( 6 )
 for n in range(0,int(N/2)):
     nrg_eigenvalues_step = nrg_eigenvalues[ n , : ]
 
-    res = opt.least_squares( F , [0.15,0.15,0.15] ); print( res )
-    U_array[n] = res.x[0]
-    Gd_array[n] = res.x[1]
-    Ga_array[n] = res.x[2]
+    res = opt.least_squares( F , [0.15,0.15,0.15,0.15] , bounds=([0,0,0,0],[10,10,10,10]) );
+    Ud_array[n] = res.x[0]
+    Ua_array[n] = res.x[1]
+    Gd_array[n] = res.x[2]
+    Ga_array[n] = res.x[3]
+    
+    print( res , file=f )
+    print( res )
+    print( f"#####\nUd = {res.x[0]}\nUa = {res.x[1]}\nGd = {res.x[2]}\nGa = {res.x[3]}\n#####" , file=f ) 
+    print( "\n\n------------------------\n\n" , file=f )
 
-plt.style.use('seaborn-paper')
-fig = plt.figure()
-ax = fig.add_subplot( 111 , projection='3d' )
+f.close()
 
+#plt.style.use('seaborn-paper')
+#fig = plt.figure()
+#ax = fig.gca( projection='3d' )
 
-pf.plot_arrows_3d( U_array , Gd_array , Ga_array , ax , fixedpoints=False )
+#pf.plot_arrows_3d( Ud_array , Ua_array , Gd_array , Ga_array , ax , fixedpoints=False )
 
-
-plt.show()
+#plt.show()
 
 

@@ -17,12 +17,12 @@ UpSet::write: Tag Gamma in snegnonopQ[Gamma] is Protected.
 
 UpSet::write: Tag Gamma in Conjugate[Gamma] is Protected.
 params={gammaPol -> Sqrt[gammaA*theta0]/Sqrt[Pi], gammaPolCh[ch_] :> Sqrt[1/Pi*theta0Ch[ch]*gammaA], hybV[i_, j_] :> Sqrt[1/Pi]*V[i, j], coefzeta[ch_, j__] :> N[bandrescale*zeta[ch][j]], coefxi[ch_, j__] :> N[bandrescale*xi[ch][j]], 
-   coefrung[ch_, j__] :> N[bandrescale*zetaR[ch][j]], coefdelta[ch_, j__] :> N[bandrescale*scdelta[ch][j]], coefkappa[ch_, j__] :> N[bandrescale*sckappa[ch][j]], U -> 0.01, delta -> 0, t -> 0., 
+   coefrung[ch_, j__] :> N[bandrescale*zetaR[ch][j]], coefdelta[ch_, j__] :> N[bandrescale*scdelta[ch][j]], coefkappa[ch_, j__] :> N[bandrescale*sckappa[ch][j]], U -> 0.1, delta -> 0, t -> 0., 
    gammaPol2 -> Sqrt[extraGamma2*gammaA*thetaCh[1]]/Sqrt[Pi], gammaPol2to2 -> Sqrt[extraGamma2to2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch1 -> Sqrt[extraGamma1*gammaA*thetaCh[1]]/Sqrt[Pi], 
    gammaPolch2 -> Sqrt[extraGamma2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch3 -> Sqrt[extraGamma3*gammaA*thetaCh[3]]/Sqrt[Pi], Jspin -> extraJspin*gammaA, Jcharge -> extraJcharge*gammaA, Jcharge1 -> extraJcharge1*gammaA, 
    Jcharge2 -> extraJcharge2*gammaA, Jkondo -> extraJkondo*gammaA, Jkondo1 -> extraJkondo1*gammaA, Jkondo2 -> extraJkondo2*gammaA, Jkondo3 -> extraJkondo3*gammaA, Jkondo1P -> extraJkondo1P*gammaA, Jkondo2P -> extraJkondo2P*gammaA, 
    Jkondo1Z -> extraJkondo1Z*gammaA, Jkondo2Z -> extraJkondo2Z*gammaA, JkondoP -> extraJkondoP*gammaA, JkondoZ -> extraJkondoZ*gammaA, Jkondo1ch2 -> extraJkondo1ch2*gammaA, Jkondo2ch2 -> extraJkondo2ch2*gammaA, gep -> extrag, dd -> extrad, 
-   U -> 0.01, Gamma -> 0.00001, delta -> 0}
+   U -> 0.1, Gamma -> 0.0002, delta -> 0}
 NRDOTS:2
 CHANNELS:1
 basis:{a[], d[], f[0]}
@@ -41,12 +41,12 @@ Basis states generated.
 BASIS NR=64
 Basis: basis.model..QS
 PREC=1000
-Tmin=1.*^-20
-Tmin=1.*^-20 ==> Nmax=100
-DISCNMAX=100
-mMAX=200
+Tmin=1.*^-10
+Tmin=1.*^-10 ==> Nmax=50
+DISCNMAX=50
+mMAX=100
 Diagonalisation.
-Discretization checksum [-1] (channel 1): 1.03289995123476343586236766880120475`10.*^-80
+Discretization checksum [-1] (channel 1): 6.42775217703596110216784836936465041`10.*^-41
 BAND="flat" thetaCh={"2."}
 Discretization (channel 1)
 "xitable" (channel 1)
@@ -101,56 +101,6 @@ Discretization (channel 1)
 1.843137556e-10
 1.165702544e-10
 7.372550225e-11
-4.662810175e-11
-2.94902009e-11
-1.86512407e-11
-1.179608036e-11
-7.46049628e-12
-4.718432144e-12
-2.984198512e-12
-1.887372857e-12
-1.193679405e-12
-7.54949143e-13
-4.774717619e-13
-3.019796572e-13
-1.909887048e-13
-1.207918629e-13
-7.63954819e-14
-4.831674515e-14
-3.055819276e-14
-1.932669806e-14
-1.22232771e-14
-7.730679224e-15
-4.889310842e-15
-3.09227169e-15
-1.955724337e-15
-1.236908676e-15
-7.822897347e-16
-4.947634704e-16
-3.129158939e-16
-1.979053881e-16
-1.251663575e-16
-7.916215526e-17
-5.006654302e-17
-3.16648621e-17
-2.002661721e-17
-1.266594484e-17
-8.010646883e-18
-5.066377936e-18
-3.204258753e-18
-2.026551175e-18
-1.281703501e-18
-8.106204698e-19
-5.126814005e-19
-3.242481879e-19
-2.050725602e-19
-1.296992752e-19
-8.202902408e-20
-5.187971007e-20
-3.281160963e-20
-2.075188403e-20
-1.312464385e-20
-0.e-12
 "zetatable" (channel 1)
 0.e-999
 0.e-998
@@ -203,61 +153,11 @@ Discretization (channel 1)
 0.e-958
 0.e-957
 0.e-956
-0.e-955
-0.e-954
-0.e-953
-0.e-953
-0.e-952
-0.e-951
-0.e-950
-0.e-949
-0.e-948
-0.e-947
-0.e-946
-0.e-946
-0.e-945
-0.e-944
-0.e-943
-0.e-942
-0.e-941
-0.e-940
-0.e-940
-0.e-939
-0.e-938
-0.e-937
-0.e-936
-0.e-920
-0.e-890
-0.e-860
-0.e-830
-0.e-799
-0.e-768
-0.e-737
-0.e-705
-0.e-673
-0.e-640
-0.e-607
-0.e-574
-0.e-540
-0.e-506
-0.e-471
-0.e-436
-0.e-401
-0.e-365
-0.e-329
-0.e-292
-0.e-255
-0.e-218
-0.e-180
-0.e-142
-0.e-103
-0.e-64
-0.e-25
-Precision last xi:0.
+Precision last xi:946.131647603918
 Precision last zeta: 0.
 Discretization done.
 --EOF--
-           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {1, 2, 100, 10}}
+           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {1, 2, 50, 10}}
 
 maketable[]
 
@@ -267,9 +167,9 @@ UpSet::write: Tag Gamma in snegnonopQ[Gamma] is Protected.
 
 UpSet::write: Tag Gamma in Conjugate[Gamma] is Protected.
 thetaCh={"2."}
-theta0Ch={"0.00002"}
-gammaPolCh={"0.00252313252202016"}
-checkdefinitions[] -> -0.00981493982383872
+theta0Ch={"0.0004"}
+gammaPolCh={"0.011283791670955126"}
+checkdefinitions[] -> -0.20972966663235904
 calcgsenergy[]
 diagvc[{-3, 1}]
 Generating matrix: ham.model..QS_-3.1
@@ -281,21 +181,21 @@ diagvc[{-2, 2}]
 Generating matrix: ham.model..QS_-2.2
 hamil={{U, gammaPolCh[1], gammaPol}, {gammaPolCh[1], delta + U/2 - coefzeta[1, 0], 0}, {gammaPol, 0, delta + U/2 - coefzeta[1, 0]}}
 dim={3, 3}
-det[vec]=-1.0000000000000002 1-abs=-2.220446049250313*^-16
-orthogonality check=4.440892098500626*^-16
+det[vec]=-0.9999999999999999 1-abs=1.1102230246251565*^-16
+orthogonality check=8.881784197001252*^-16
 diagvc[{-1, 1}]
 Generating matrix: ham.model..QS_-1.1
 hamil={{U + coefzeta[1, 0], Sqrt[2]*gammaPolCh[1], Sqrt[2]*gammaPol, 0, 0, 0}, {Sqrt[2]*gammaPolCh[1], delta + U/2, 0, Sqrt[2]*gammaPolCh[1], gammaPol, 0}, {Sqrt[2]*gammaPol, 0, delta + U/2, 0, gammaPolCh[1], Sqrt[2]*gammaPol}, 
    {0, Sqrt[2]*gammaPolCh[1], 0, 2*delta + U - coefzeta[1, 0], 0, 0}, {0, gammaPol, gammaPolCh[1], 0, 2*delta - coefzeta[1, 0], 0}, {0, 0, Sqrt[2]*gammaPol, 0, 0, 2*delta + U - coefzeta[1, 0]}}
 dim={6, 6}
-det[vec]=-0.9999999999999998 1-abs=2.220446049250313*^-16
-orthogonality check=3.469446951953614*^-15
+det[vec]=-1. 1-abs=0.
+orthogonality check=5.93275428784068*^-15
 diagvc[{-1, 3}]
 Generating matrix: ham.model..QS_-1.3
 hamil={{delta + U/2, 0, -gammaPol}, {0, delta + U/2, gammaPolCh[1]}, {-gammaPol, gammaPolCh[1], 2*delta - coefzeta[1, 0]}}
 dim={3, 3}
-det[vec]=-1.0000000000000004 1-abs=-4.440892098500626*^-16
-orthogonality check=7.36414374646904*^-16
+det[vec]=-1. 1-abs=0.
+orthogonality check=9.147928126682036*^-16
 diagvc[{0, 2}]
 Generating matrix: ham.model..QS_0.2
 hamil={{delta + U/2 + coefzeta[1, 0], 0, -gammaPolCh[1], -(gammaPol/Sqrt[2]), 0, -(Sqrt[3/2]*gammaPol), 0, 0}, {0, delta + U/2 + coefzeta[1, 0], 0, -(gammaPolCh[1]/Sqrt[2]), -gammaPol, Sqrt[3/2]*gammaPolCh[1], 0, 0}, 
@@ -304,7 +204,7 @@ hamil={{delta + U/2 + coefzeta[1, 0], 0, -gammaPolCh[1], -(gammaPol/Sqrt[2]), 0,
    {0, 0, 0, -(gammaPol/Sqrt[2]), gammaPolCh[1], -(Sqrt[3/2]*gammaPol), 0, (6*delta + U - 2*coefzeta[1, 0])/2}}
 dim={8, 8}
 det[vec]=-1.0000000000000002 1-abs=-2.220446049250313*^-16
-orthogonality check=1.0796918914479647*^-14
+orthogonality check=6.654399253847032*^-15
 diagvc[{0, 4}]
 Generating matrix: ham.model..QS_0.4
 hamil={{2*delta}}
@@ -317,34 +217,33 @@ hamil={{2*delta + U + coefzeta[1, 0], 0, 0, Sqrt[2]*gammaPol, 0, 0}, {0, 2*delta
    {Sqrt[2]*gammaPol, -gammaPolCh[1], 0, (6*delta + U)/2, 0, Sqrt[2]*gammaPol}, {0, -gammaPol, Sqrt[2]*gammaPolCh[1], 0, (6*delta + U)/2, Sqrt[2]*gammaPolCh[1]}, 
    {0, 0, 0, Sqrt[2]*gammaPol, Sqrt[2]*gammaPolCh[1], 4*delta + U - coefzeta[1, 0]}}
 dim={6, 6}
-det[vec]=0.9999999999999999 1-abs=1.1102230246251565*^-16
-orthogonality check=4.802838879064671*^-15
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=7.696652950650294*^-15
 diagvc[{1, 3}]
 Generating matrix: ham.model..QS_1.3
 hamil={{2*delta + coefzeta[1, 0], -gammaPolCh[1], gammaPol}, {-gammaPolCh[1], (6*delta + U)/2, 0}, {gammaPol, 0, (6*delta + U)/2}}
 dim={3, 3}
 det[vec]=1. 1-abs=0.
-orthogonality check=4.440892098500626*^-16
+orthogonality check=7.216449660063518*^-16
 diagvc[{2, 2}]
 Generating matrix: ham.model..QS_2.2
 hamil={{3*delta + U/2 + coefzeta[1, 0], 0, -gammaPol}, {0, 3*delta + U/2 + coefzeta[1, 0], -gammaPolCh[1]}, {-gammaPol, -gammaPolCh[1], 4*delta + U}}
 dim={3, 3}
-det[vec]=0.9999999999999999 1-abs=1.1102230246251565*^-16
-orthogonality check=2.2270168979879426*^-15
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=1.720104863942138*^-15
 diagvc[{3, 1}]
 Generating matrix: ham.model..QS_3.1
 hamil={{4*delta + U + coefzeta[1, 0]}}
 dim={1, 1}
 det[vec]=1. 1-abs=0.
 orthogonality check=0.
-Lowest energies (absolute):{-0.004454944236515232, -0.002707841877649402, -0.0027078418776494, -0.0018568790948741776, -0.0018568790948741759, -0.0018568790948741746, 0., 0.0031431209051258173, 0.0031431209051258225, 0.0031431209051258225, 
-   0.0031431209051258225, 0.003143120905125824, 0.003252897641134167, 0.003252897641134169, 0.005, 0.005, 0.005, 0.0050000000000000044, 0.005000000000000005, 0.006747102358865832}
-Lowest energies (GS shifted):{0., 0.0017471023588658298, 0.0017471023588658315, 0.002598065141641054, 0.0025980651416410558, 0.002598065141641057, 0.004454944236515232, 0.007598065141641049, 0.007598065141641054, 0.007598065141641054, 
-   0.007598065141641054, 0.007598065141641056, 0.0077078418776493985, 0.007707841877649401, 0.00945494423651523, 0.00945494423651523, 0.00945494423651523, 0.009454944236515236, 0.009454944236515238, 0.011202046595381064}
+Lowest energies (absolute):{-0.01265022978834271, -0.0053001678949266134, -0.005300167894926586, -0.004658858861173891, -0.004658858861173885, -0.004658858861173884, 0., 0.042649938106583886, 0.04264993810658391, 0.045341141138826105, 
+   0.045341141138826105, 0.04534114113882612, 0.04534114113882613, 0.045341141138826146, 0.04999999999999997, 0.049999999999999996, 0.049999999999999996, 0.05000000000000001, 0.05000000000000002, 0.05465885886117387}
+Lowest energies (GS shifted):{0., 0.007350061893416096, 0.007350061893416124, 0.007991370927168819, 0.007991370927168825, 0.007991370927168825, 0.01265022978834271, 0.055300167894926595, 0.055300167894926616, 0.057991370927168814, 
+   0.057991370927168814, 0.05799137092716883, 0.05799137092716884, 0.057991370927168856, 0.06265022978834267, 0.0626502297883427, 0.0626502297883427, 0.06265022978834273, 0.06265022978834273, 0.06730908864951658}
 Scale factor SCALE(Ninit):1.0353518430881692
-Lowest energies (shifted and scaled):{0., 0.00168744796324958, 0.0016874479632495816, 0.0025093548236624005, 0.0025093548236624023, 0.0025093548236624036, 0.004302831222309279, 0.00733863100970402, 0.007338631009704025, 
-   0.007338631009704025, 0.007338631009704025, 0.007338631009704027, 0.00744465944510132, 0.007444659445101322, 0.009132107408350902, 0.009132107408350902, 0.009132107408350902, 0.009132107408350907, 0.009132107408350909, 
-   0.010819555371600486}
+Lowest energies (shifted and scaled):{0., 0.007099095773561273, 0.0070990957735613, 0.00771850746248035, 0.007718507462480357, 0.007718507462480357, 0.012218290692959564, 0.05341195677981452, 0.05341195677981454, 0.056011269322896594, 
+   0.056011269322896594, 0.05601126932289661, 0.056011269322896615, 0.05601126932289663, 0.06051105255337577, 0.0605110525533758, 0.0605110525533758, 0.06051105255337583, 0.06051105255337583, 0.06501083578385501}
 makeireducf GENERAL
 ireducTable: f[0]{}
 Loading module operators.m
@@ -368,11 +267,11 @@ Loading module modeloperators.m
 Can't load modeloperators.m. Continuing.
 -- maketable[] done --
 Timing report
-{basis, 0.078214`5.344829490527114}
-{ham, 0.793694`5.351198090726468}
-{maketable, 2.192639`6.792512128040091}
-{xi, 1.770189`6.699564631199625}
+{basis, 0.076626`5.335921148776418}
+{ham, 0.793081`5.350862539018567}
+{maketable, 2.201689`6.794300966114097}
+{xi, 0.528574`6.174650790327536}
 {_, 0}
 data
-gammaPol=0.00252313252202016
+gammaPol=0.011283791670955126
 "Success!"

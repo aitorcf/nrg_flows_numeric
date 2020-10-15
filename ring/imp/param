@@ -1,13 +1,13 @@
 [extra]
-U=1e-2
-Gamma=1e-5
+U=1e-1
+Gamma=2e-4
 delta=0
 
 [param]
 symtype=QS
 discretization=Z
 Lambda=2.5
-Tmin=1e-20
+Tmin=1e-10
 keepenergy=10
 keep=10000
 keepmin=1200
