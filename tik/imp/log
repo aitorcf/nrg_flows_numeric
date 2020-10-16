@@ -1,0 +1,233 @@
+NRG Ljubljana 2.4.3.34 - (c) Rok Zitko <rok.zitko@ijs.si>
+Timestamp: Tue Jan 29 22:58:56 2019
+Compiled on Oct  2 2020 at 12:28:28
+Compiled-in symmetry types: ANYJ DBLISOSZ DBLSU2 ISO ISO2 ISO2LR ISOLR ISOSZ ISOSZLR NONE P PP QJ QS QSC3 QSLR QST QSTZ QSZ QSZLR QSZTZ SL SL3 SPSU2 SPSU2C3 SPSU2LR SPSU2T SPU1 SPU1LR SU2 U1 
+
+No MPI: single node calculation.
+
+workdir=.
+substeps=0
+Ninit=0
+Lambda=2.5
+strategy=kept
+lastall=0
+lastalloverride=0
+z=1
+discretization=Z
+band=flat
+bandrescale=1
+betabar=1
+T=-999
+keep=300
+keepenergy=10
+keepmin=0
+log=
+logall=0
+logenumber=10
+smooth=old
+alpha=0.3
+omega0=-1
+omega0_ratio=1
+brcut=0
+loggauss_b=0.3
+gauss_b=0.1
+limitLL=0
+eta=0
+finite=0
+bins=100
+accumulation=0
+linstep=0
+discard_trim=1e-16
+discard_immediately=1e-16
+NN1=0
+NN2even=1
+NN2avg=0
+NNtanh=0
+goodE=2
+savebins=0
+broaden=1
+broaden_max=2.5
+broaden_min=-99
+broaden_min_ratio=3
+broaden_ratio=1.05
+dumpenergies=0
+dumpannotated=40
+dumpscaled=1
+dumpabs=0
+dumpprecision=8
+dumpgroups=0
+grouptol=1e-06
+dumpdiagonal=0
+ops=
+specs=
+specd=
+spect=
+specq=
+specot=
+reim=0
+specgt=
+gtp=0.7
+speci1t=
+speci2t=
+specchit=
+chitp=1
+chitp_ratio=-999
+dm=0
+T0opt=-1
+dmnrg=0
+cfs=0
+cfsgt=0
+cfsls=0
+fdm=0
+fdmgt=0
+fdmls=0
+fdmexpv=0
+fdmexpvn=0
+cfsold=0
+fdmold=0
+width_td=12
+width_custom=12
+prec_td=6
+prec_custom=6
+prec_xy=6
+safeguard=1e-05
+safeguardmax=200
+fixeps=1e-15
+diag=dsyev
+diagratio=1
+dsyevrlimit=100
+zheevrlimit=100
+restart=1
+restartfactor=2
+checkdiag=0
+checkrho=0
+calc0=1
+tdht=0
+spin=2
+tri=old
+preccpp=2000
+checksumrules=0
+globalB=0
+globalBx=0
+polarized=0
+pol2x2=0
+mpi=0
+noimag=1
+dumpsubspaces=0
+done=1
+resume=0
+forcestop=-1
+stopafter=
+removefiles=1
+dump_f=0
+rungs=0
+
+>>  Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015
+SYMMETRY TYPE: QS
+invdim=2
+0 Q additive
+1 SS additive
+I=(0 1) [0 (additive), 1 (additive)]
+singlet QNs=(0 1) mult=1
+>>  Using sneg version 	1.251
+V8
+>>  Number of channels, impurities, chain sites, subspaces: 
+channels=2 impurities=2 Nmax=75 subspaces=11
+Reading <||||> (e)
+Reading <||||> (z)
+
+length_coef_table=75 Nmax=75
+
+Number of invariant subspaces: 11
+(-2 1) 1 states
+0.2173174283718732 
+(-2 3) 1 states
+0.2173174283718732 
+(-1 2) 4 states
+0.07243914279062443 0.1448782855812488 0.2414638093020813 0.2656101902322894 
+(-1 4) 2 states
+0.2414638093020813 0.2656101902322894 
+(0 1) 4 states
+0 0.2173174283718732 0.2173174283718732 0.2897565711624975 
+(0 3) 5 states
+0.09658552372083255 0.1931710474416651 0.2173174283718732 0.2173174283718732 0.2897565711624975 
+(0 5) 1 states
+0.2897565711624975 
+(1 2) 4 states
+0.07243914279062443 0.1448782855812488 0.2414638093020813 0.2656101902322894 
+(1 4) 2 states
+0.2414638093020813 0.2656101902322894 
+(2 1) 1 states
+0.2173174283718732 
+(2 3) 1 states
+0.2173174283718732 
+Number of states (multiplicity taken into account): 64
+
+Computing the following operators:
+s=[]
+p=[]
+g=[]
+d=[]
+v=[]
+t=[]
+q=[]
+ot=[]
+
+Computing the following spectra:
+
+Before NRG iteration (N=-1)
+
+ ***** [NRG] Iteration 1/75 (scale 0.65481400076237484) ***** 
+[1] xi(0)=0.52427078513901 xi_scaled(0)=0.8006407690254357 zeta(1)=0
+[2] xi(0)=0.52427078513901 xi_scaled(0)=0.8006407690254357 zeta(1)=0
+Stats: nr=24 min=1 max=51
+Safeguard: keep additional 2 states
+Emax=4.049749263970877 nrkept=302 nrkeptmult=828 
+Total energy=-2.101966004928667  Egs=-2.866410923931662
+Kept: 302 out of 372, ratio=0.812
+Memory used: 30 MB  Time elapsed: 0 s
+
+ ***** [NRG] Iteration 2/75 (scale 0.41414073723526762) ***** 
+[1] xi(1)=0.3614301390394094 xi_scaled(1)=0.8727229816903667 zeta(2)=0
+[2] xi(1)=0.3614301390394094 xi_scaled(1)=0.8727229816903667 zeta(2)=0
+Stats: nr=41 min=1 max=473
+Safeguard: keep additional 2 states
+Emax=3.1300627679827 nrkept=302 nrkeptmult=762 
+Total energy=-2.631059532620394  Egs=-1.277569386735208
+Kept: 302 out of 4428, ratio=0.0682
+Memory used: 41 MB  Time elapsed: 0 s
+
+ ***** [NRG] Iteration 3/75 (scale 0.26192560030494993) ***** 
+[1] xi(2)=0.2466294380199815 xi_scaled(2)=0.9416011177710017 zeta(3)=0
+[2] xi(2)=0.2466294380199815 xi_scaled(2)=0.9416011177710017 zeta(3)=0
+Stats: nr=38 min=1 max=462
+Safeguard: keep additional 4 states
+Emax=3.448422137053281 nrkept=304 nrkeptmult=812 
+Total energy=-3.410446003601854  Egs=-2.975602499618401
+Kept: 304 out of 4298, ratio=0.0707
+Memory used: 46 MB  Time elapsed: 1 s
+
+ ***** [NRG] Iteration 4/75 (scale 0.16565629489410705) ***** 
+[1] xi(3)=0.1615690665943625 xi_scaled(3)=0.9753270571314104 zeta(4)=0
+[2] xi(3)=0.1615690665943625 xi_scaled(3)=0.9753270571314104 zeta(4)=0
+Stats: nr=41 min=1 max=480
+Safeguard: keep additional 6 states
+Emax=3.159267683099245 nrkept=306 nrkeptmult=792 
+Total energy=-3.665322249495047  Egs=-1.538584730849613
+Kept: 306 out of 4372, ratio=0.07
+Memory used: 46 MB  Time elapsed: 2 s
+
+ ***** [NRG] Iteration 5/75 (scale 0.10477024012197998) ***** 
+[1] xi(4)=0.1037131624061205 xi_scaled(4)=0.9899105154800759 zeta(5)=0
+[2] xi(4)=0.1037131624061205 xi_scaled(4)=0.9899105154800759 zeta(5)=0
+Stats: nr=38 min=1 max=472
+Safeguard: keep additional 4 states
+Emax=3.499025262426209 nrkept=304 nrkeptmult=812 
+Total energy=-3.981979696204623  Egs=-3.022398787488735
+Kept: 304 out of 4412, ratio=0.0689
+Memory used: 44 MB  Time elapsed: 2 s
+
+ ***** [NRG] Iteration 6/75 (scale 0.066262517957642819) ***** 
+[1] xi(5)=0.06599271209660684 xi_scaled(5)=0.995928228063889 zeta(6)=0
+[2] xi(5)=0.06599271209660684 xi_scaled(5)=0.995928228063889 zeta(6)=0
+Stats: nr=41 min=1 max=480

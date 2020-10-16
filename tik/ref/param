@@ -1,0 +1,12 @@
+[param]
+symtype=QS
+discretization=Z
+Lambda=2.5
+Tmin=1e-15
+keepenergy=10
+keep=300
+
+model=./tikclean.m
+
+dumpannotated=40
+dumpgroups=false
