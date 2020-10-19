@@ -1,0 +1,30 @@
+#!/bin/bash
+
+awk -v rows=0 -v columns=0 '\
+	BEGIN \
+	{print "# T       <Sz^2>          <Q>        <Q^2>          <E>        <E^2>            C            F            S"} \
+	NR!=1 \
+	{ if (NR==FNR) { \
+		temp[FNR]=$1 ; \
+		columns=NF ; \
+		for (i=2;i<=NF;i++) td_0[FNR,i]=$i \
+		} \
+	else { \
+		if (FNR==1) {rows=NR-1} ; \
+		for (i=2;i<=NF;i++) { \
+			td_tot[FNR,i]=$i ; \
+			td_diff[FNR,i]=td_tot[FNR,i]-td_0[FNR,i] \
+			} \
+		} \
+	} \
+	\
+	END \
+	{ for (i=2;i<=rows;i++) { \
+		printf "%s ",temp[i]; \
+		for (j=2;j<=columns;j++) { \
+			printf "%s ",td_diff[i,j]; \
+			if (j==columns) printf "\n" \
+			} \
+		} \
+	} \
+	' ../ref/td td > td_diff.dat

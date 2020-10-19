@@ -1,7 +1,7 @@
 [extra]
 spin=1/2
 Jkondo1=0.1
-Jkondo2=0.2
+Jkondo2=0.1
 Jad=0
 
 [param]
@@ -10,7 +10,7 @@ discretization=Z
 Lambda=2.5
 Tmin=1e-15
 keepenergy=10
-keep=300
+keep=2000
 
 model=TWO
 variant=DQDKONDO
