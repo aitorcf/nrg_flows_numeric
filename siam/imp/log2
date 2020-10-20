@@ -1,0 +1,3 @@
+
+Please verify that both the operating system and the processor support Intel(R) AVX512F, AVX512DQ, AVX512CD, AVX512BW, AVX512VL, AVX512VBMI, AVX512_VPOPCNTDQ, AVX512_BITALG and AVX512_VBMI2 instructions.
+

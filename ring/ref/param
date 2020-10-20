@@ -2,7 +2,7 @@
 symtype=QS
 discretization=Z
 Lambda=2.5
-Tmin=1e-10
+Tmin=1e-20
 keepenergy=26
 keep=5000
 

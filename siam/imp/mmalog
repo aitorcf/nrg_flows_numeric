@@ -235,8 +235,8 @@ diagvc[{0, 1}]
 Generating matrix: ham.SIAM..QS_0.1
 hamil={{U/2 + coefzeta[1, 0], Sqrt[2]*gammaPolCh[1], 0}, {Sqrt[2]*gammaPolCh[1], delta, Sqrt[2]*gammaPolCh[1]}, {0, Sqrt[2]*gammaPolCh[1], (4*delta + U - 2*coefzeta[1, 0])/2}}
 dim={3, 3}
-det[vec]=1. 1-abs=0.
-orthogonality check=1.942890293094024*^-15
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=1.8318679906315083*^-15
 diagvc[{0, 3}]
 Generating matrix: ham.SIAM..QS_0.3
 hamil={{delta}}
@@ -278,10 +278,10 @@ Loading module modeloperators.m
 Can't load modeloperators.m. Continuing.
 -- maketable[] done --
 Timing report
-{basis, 0.012828`4.559703944752377}
-{ham, 0.094196`4.647426204134384}
-{maketable, 0.44935`6.104129739522632}
-{xi, 1.079795`6.48488630563153}
+{basis, 0.014552`4.614467679551402}
+{ham, 0.101609`4.680325920324283}
+{maketable, 0.482866`6.1353716200347925}
+{xi, 1.226747`6.540299998086536}
 {_, 0}
 data
 gammaPol=0.011283791670955126
