@@ -1,0 +1,9 @@
+H0 from RING: ring
+
+RING with 3 parameters: ring3
+
+RING with 4 parameters: ring4
+
+SUPERRING with 3 parameters: sring3
+
+* "_l" means only the lowest eigenvalues are computed

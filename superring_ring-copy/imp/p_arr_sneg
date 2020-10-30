@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+
+import numpy as np
+import py_functions as pf
+import sys
+import scipy.optimize as opt
+import matplotlib.pyplot as plt
+from matplotlib.colors import Normalize
+import matplotlib.cm as cm
+from matplotlib.lines import Line2D
+import math as mt
+import subprocess 
+
+arguments = []
+for arg in sys.argv[1:]:
+    arguments.append(arg)
+OUTFILE = 0
+if np.size(arguments)>=1:
+    OUTFILE = arguments[0]
+
+
+N = pf.get_N( 'e-q0s2_table1.dat' )
+U_param, GAMMA_param = pf.get_u_gamma()
+
+
+def F(in_array):
+    U = in_array[0]
+    GAMMA = in_array[1]
+
+    out_array = np.empty( 22 )
+
+    analytic_eigenvalues = pf.compute_h0_eigenvalues_sneg( U , GAMMA )
+
+    for i in range(22):
+        out_array[i] = nrg_eigenvalues_step[i] - analytic_eigenvalues[i]
+
+    return out_array
+
+
+U_array = np.empty( int(N/2) )
+GAMMA_array = np.empty( int(N/2) )
+
+nrg_eigenvalues = pf.read_h0_eigenvalues()
+
+for n in range(0,int(N/2)):
+    nrg_eigenvalues_step = nrg_eigenvalues[n,:]
+
+    res = opt.least_squares( F , [0.1,0.1] ,bounds=([0,0],['inf','inf']) , jac='3-point' )
+    U_array[n] = res.x[0]
+    GAMMA_array[n] = res.x[1]
+
+
+plt.style.use('seaborn-whitegrid')
+fig, ax = plt.subplots()
+
+pf.plot_arrows( U_array , GAMMA_array , ax , fixedpoints=False )
+
+ax.set_title('Flow path for $ {}{:4.1e} $ and $ {}{:4.1e} $   ($D=1$ units)'.format("U=",float(U_param),'\Gamma=',float(GAMMA_param)))
+
+if OUTFILE!=0:
+    if OUTFILE=='folder':
+        plt.savefig("graphs_and_data/arrowflow_and_eigenflow/u-{0:.4f}_gamma-{1:.4f}_UGdiagram.png".format(float(U_param),float(GAMMA_param)))
+    elif OUTFILE=='def':
+        plt.savefig("u-{0:.4f}_gamma-{1:.4f}_UGdiagram.png".format(float(U_param),float(GAMMA_param)))
+    else:
+        plt.savefig("{}".format(OUTFILE))
+else:
+    plt.show()
+
+

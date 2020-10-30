@@ -15,8 +15,9 @@ params={gammaPol -> Sqrt[gammaA*theta0]/Sqrt[Pi], gammaPolCh[ch_] :> Sqrt[1/Pi*t
    coefrung[ch_, j__] :> N[bandrescale*zetaR[ch][j]], coefdelta[ch_, j__] :> N[bandrescale*scdelta[ch][j]], coefkappa[ch_, j__] :> N[bandrescale*sckappa[ch][j]], U -> 0.1, delta -> 0., t -> 0., 
    gammaPol2 -> Sqrt[extraGamma2*gammaA*thetaCh[1]]/Sqrt[Pi], gammaPol2to2 -> Sqrt[extraGamma2to2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch1 -> Sqrt[extraGamma1*gammaA*thetaCh[1]]/Sqrt[Pi], 
    gammaPolch2 -> Sqrt[extraGamma2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch3 -> Sqrt[extraGamma3*gammaA*thetaCh[3]]/Sqrt[Pi], Jspin -> extraJspin*gammaA, Jcharge -> extraJcharge*gammaA, Jcharge1 -> extraJcharge1*gammaA, 
-   Jcharge2 -> extraJcharge2*gammaA, Jkondo -> extraJkondo*gammaA, Jkondo1 -> extraJkondo1*gammaA, Jkondo2 -> extraJkondo2*gammaA, Jkondo3 -> extraJkondo3*gammaA, Jkondo1P -> extraJkondo1P*gammaA, Jkondo2P -> extraJkondo2P*gammaA, 
-   Jkondo1Z -> extraJkondo1Z*gammaA, Jkondo2Z -> extraJkondo2Z*gammaA, JkondoP -> extraJkondoP*gammaA, JkondoZ -> extraJkondoZ*gammaA, Jkondo1ch2 -> extraJkondo1ch2*gammaA, Jkondo2ch2 -> extraJkondo2ch2*gammaA, gep -> extrag, dd -> extrad}
+   Jcharge2 -> extraJcharge2*gammaA, Jkondo -> extraJkondo*gammaA, Jkondo1 -> extraJkondo1*gammaA, Jkondo2 -> extraJkondo2*gammaA, Jkondo3 -> extraJkondo3*gammaA, Jad -> extraJad*gammaA, Jkondo1P -> extraJkondo1P*gammaA, 
+   Jkondo2P -> extraJkondo2P*gammaA, Jkondo1Z -> extraJkondo1Z*gammaA, Jkondo2Z -> extraJkondo2Z*gammaA, JkondoP -> extraJkondoP*gammaA, JkondoZ -> extraJkondoZ*gammaA, Jkondo1ch2 -> extraJkondo1ch2*gammaA, 
+   Jkondo2ch2 -> extraJkondo2ch2*gammaA, gep -> extrag, dd -> extrad}
 NRDOTS:0
 CHANNELS:2
 basis:{f[0], f[1]}
@@ -32,13 +33,13 @@ Basis states generated.
 BASIS NR=16
 Basis: basis.ZERO..QS
 PREC=1000
-Tmin=1.*^-10
-Tmin=1.*^-10 ==> Nmax=42
-DISCNMAX=42
-mMAX=84
+Tmin=1.*^-15
+Tmin=1.*^-15 ==> Nmax=62
+DISCNMAX=62
+mMAX=124
 Diagonalisation.
-Discretization checksum [-1] (channel 1): 2.784154609541307270170357727625724949`10.*^-41
-Discretization checksum [-1] (channel 2): 2.784154609541307270170357727625724949`10.*^-41
+Discretization checksum [-1] (channel 1): 2.290040484266849034268430612907880625`10.*^-60
+Discretization checksum [-1] (channel 2): 2.290040484266849034268430612907880625`10.*^-60
 BAND="flat" thetaCh={"2.", "2."}
 Discretization (channel 1)
 "xitable" (channel 1)
@@ -85,6 +86,26 @@ Discretization (channel 1)
 1.740360405e-10
 1.004797548e-10
 5.801201349e-11
+3.34932516e-11
+1.933733783e-11
+1.11644172e-11
+6.445779276e-12
+3.7214724e-12
+2.148593092e-12
+1.2404908e-12
+7.161976974e-13
+4.134969334e-13
+2.387325658e-13
+1.378323111e-13
+7.957752193e-14
+4.594410371e-14
+2.652584064e-14
+1.531470124e-14
+8.841946881e-15
+5.104900412e-15
+2.947315627e-15
+1.701633471e-15
+9.824385423e-16
 "zetatable" (channel 1)
 0.e-999
 0.e-998
@@ -129,7 +150,27 @@ Discretization (channel 1)
 0.e-964
 0.e-963
 0.e-962
-Precision last xi:952.2651260013099
+0.e-961
+0.e-961
+0.e-960
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-953
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-945
+0.e-945
+Precision last xi:929.8009252716575
 Precision last zeta: 0.
 Discretization (channel 2)
 "xitable" (channel 2)
@@ -176,6 +217,26 @@ Discretization (channel 2)
 1.740360405e-10
 1.004797548e-10
 5.801201349e-11
+3.34932516e-11
+1.933733783e-11
+1.11644172e-11
+6.445779276e-12
+3.7214724e-12
+2.148593092e-12
+1.2404908e-12
+7.161976974e-13
+4.134969334e-13
+2.387325658e-13
+1.378323111e-13
+7.957752193e-14
+4.594410371e-14
+2.652584064e-14
+1.531470124e-14
+8.841946881e-15
+5.104900412e-15
+2.947315627e-15
+1.701633471e-15
+9.824385423e-16
 "zetatable" (channel 2)
 0.e-999
 0.e-998
@@ -220,15 +281,35 @@ Discretization (channel 2)
 0.e-964
 0.e-963
 0.e-962
-Precision last xi:952.2651260013099
+0.e-961
+0.e-961
+0.e-960
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-953
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-945
+0.e-945
+Precision last xi:929.8009252716575
 Precision last zeta: 0.
 Discretization done.
 --EOF--
-           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {2, 0, 42, 6}}
+           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {2, 0, 62, 6}}
 
 maketable[]
 
-exnames={d, g, Gamma1, Gamma2, Gamma2to2, Gamma3, Jcharge, Jcharge1, Jcharge2, Jkondo, Jkondo1, Jkondo1ch2, Jkondo1P, Jkondo1Z, Jkondo2, Jkondo2ch2, Jkondo2P, Jkondo2Z, Jkondo3, JkondoP, JkondoZ, Jspin}
+exnames={d, g, Gamma1, Gamma2, Gamma2to2, Gamma3, Jad, Jcharge, Jcharge1, Jcharge2, Jkondo, Jkondo1, Jkondo1ch2, Jkondo1P, Jkondo1Z, Jkondo2, Jkondo2ch2, Jkondo2P, Jkondo2Z, Jkondo3, JkondoP, JkondoZ, Jspin}
 thetaCh={"2.", "2."}
 theta0Ch={"0.2", "0.2"}
 gammaPolCh={"0.252313252202016", "0.252313252202016"}
@@ -286,10 +367,10 @@ Loading module modeloperators.m
 Can't load modeloperators.m. Continuing.
 -- maketable[] done --
 Timing report
-{basis, 0.008165`4.36350118256866}
-{ham, 0.0183179999999999999`3.9362717977946353}
-{maketable, 0.208124`5.769867157641143}
-{xi, 0.467123`6.120976244913853}
+{basis, 0.007662`4.335887141143032}
+{ham, 0.0185020000000000001`3.9406124197324464}
+{maketable, 0.213235`5.780403483997425}
+{xi, 0.963991`6.435617972763345}
 {_, 0}
 data
 gammaPol=0.252313252202016

@@ -1,8 +1,8 @@
 [param]
 symtype=QS
 discretization=Z
-Lambda=3
-Tmin=1e-10
+Lambda=3.0
+Tmin=1e-15
 keepenergy=10
 keep=10000
 

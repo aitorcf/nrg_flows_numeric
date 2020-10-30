@@ -1,0 +1,12 @@
+[param]
+symtype=QS
+discretization=Z
+Lambda=3
+Tmin=1e-20
+keepenergy=10
+keep=2000
+
+model=ZERO
+
+dumpannotated=40
+dumpgroups=false

@@ -1,0 +1,17 @@
+[extra]
+U=1
+Gamma1=5e-2
+Gamma2=1e-2
+
+[param]
+symtype=QS
+discretization=Z
+Lambda=3
+Tmin=1e-10
+keepenergy=10
+keep=2000
+
+model=./superring.m
+
+dumpannotated=40
+dumpgroups=false

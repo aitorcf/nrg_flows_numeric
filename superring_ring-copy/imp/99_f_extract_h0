@@ -1,0 +1,25 @@
+#!/bin/bash
+
+./99_f_extract e 0 2 1 >e-q0s2_table1.dat
+for i in {2..8}; do
+./99_f_extract e 0 2 $i >>e-q0s2_table1.dat
+done
+
+./99_f_extract e 0 4 1 >e-q0s4_table1.dat
+
+./99_f_extract e 1 1 1 >e-q1s1_table1.dat
+for i in {2..4}; do
+./99_f_extract e 1 1 $i >>e-q1s1_table1.dat
+done
+
+./99_f_extract e 1 3 1 >e-q1s3_table1.dat
+for i in 2 3; do
+./99_f_extract e 1 3 $i >>e-q1s3_table1.dat
+done
+
+./99_f_extract e 2 2 1 >e-q2s2_table1.dat
+for i in 2 3; do
+./99_f_extract e 2 2 $i >>e-q2s2_table1.dat
+done
+
+./99_f_extract e 3 1 1 >e-q3s1_table1.dat

@@ -5,40 +5,46 @@ Loading module initialparse.m
 Options: {}
 Loading module models.m
 "models started"
-def2ch, NRDOTS=0
+def2ch, NRDOTS=1
 COEFCHANNELS:2
 H0=coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]]) + coefzeta[2, 0]*(-1 + nc[f[0, 1, 0], f[1, 1, 0]] + nc[f[0, 1, 1], f[1, 1, 1]])
-adddots, nrdots=0
+adddots, nrdots=1
 Loading module custommodels.m
 Can't load custommodels.m. Continuing.
 params={gammaPol -> Sqrt[gammaA*theta0]/Sqrt[Pi], gammaPolCh[ch_] :> Sqrt[1/Pi*theta0Ch[ch]*gammaA], hybV[i_, j_] :> Sqrt[1/Pi]*V[i, j], coefzeta[ch_, j__] :> N[bandrescale*zeta[ch][j]], coefxi[ch_, j__] :> N[bandrescale*xi[ch][j]], 
    coefrung[ch_, j__] :> N[bandrescale*zetaR[ch][j]], coefdelta[ch_, j__] :> N[bandrescale*scdelta[ch][j]], coefkappa[ch_, j__] :> N[bandrescale*sckappa[ch][j]], U -> 0.1, delta -> 0., t -> 0., 
    gammaPol2 -> Sqrt[extraGamma2*gammaA*thetaCh[1]]/Sqrt[Pi], gammaPol2to2 -> Sqrt[extraGamma2to2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch1 -> Sqrt[extraGamma1*gammaA*thetaCh[1]]/Sqrt[Pi], 
    gammaPolch2 -> Sqrt[extraGamma2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch3 -> Sqrt[extraGamma3*gammaA*thetaCh[3]]/Sqrt[Pi], Jspin -> extraJspin*gammaA, Jcharge -> extraJcharge*gammaA, Jcharge1 -> extraJcharge1*gammaA, 
-   Jcharge2 -> extraJcharge2*gammaA, Jkondo -> extraJkondo*gammaA, Jkondo1 -> extraJkondo1*gammaA, Jkondo2 -> extraJkondo2*gammaA, Jkondo3 -> extraJkondo3*gammaA, Jkondo1P -> extraJkondo1P*gammaA, Jkondo2P -> extraJkondo2P*gammaA, 
-   Jkondo1Z -> extraJkondo1Z*gammaA, Jkondo2Z -> extraJkondo2Z*gammaA, JkondoP -> extraJkondoP*gammaA, JkondoZ -> extraJkondoZ*gammaA, Jkondo1ch2 -> extraJkondo1ch2*gammaA, Jkondo2ch2 -> extraJkondo2ch2*gammaA, gep -> extrag, dd -> extrad}
-NRDOTS:0
+   Jcharge2 -> extraJcharge2*gammaA, Jkondo -> extraJkondo*gammaA, Jkondo1 -> 0.001*gammaA, Jkondo2 -> 0.001*gammaA, Jkondo3 -> extraJkondo3*gammaA, Jad -> extraJad*gammaA, Jkondo1P -> extraJkondo1P*gammaA, 
+   Jkondo2P -> extraJkondo2P*gammaA, Jkondo1Z -> extraJkondo1Z*gammaA, Jkondo2Z -> extraJkondo2Z*gammaA, JkondoP -> extraJkondoP*gammaA, JkondoZ -> extraJkondoZ*gammaA, Jkondo1ch2 -> extraJkondo1ch2*gammaA, 
+   Jkondo2ch2 -> extraJkondo2ch2*gammaA, gep -> extrag, dd -> extrad, Jkondo1 -> 0.001, Jkondo2 -> 0.001}
+NRDOTS:1
 CHANNELS:2
-basis:{f[0], f[1]}
-lrchain:{f[0], f[1]}
+basis:{d[], f[0], f[1]}
+lrchain:{f[0], d[], f[1]}
 lrextrarule:{}
-NROPS:2
-Hamiltonian generated. -coefzeta[1, 0] - coefzeta[2, 0] + coefzeta[1, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]] + coefzeta[2, 0]*nc[f[0, 1, 0], f[1, 1, 0]] + coefzeta[2, 0]*nc[f[0, 1, 1], f[1, 1, 1]]
+NROPS:3
+Hamiltonian generated. -coefzeta[1, 0] - coefzeta[2, 0] + coefzeta[1, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]] + coefzeta[2, 0]*nc[f[0, 1, 0], f[1, 1, 0]] + coefzeta[2, 0]*nc[f[0, 1, 1], f[1, 1, 1]] - 
+   (Jkondo1*nc[d[0, 0], f[0, 0, 0], d[1, 0], f[1, 0, 0]])/4 + (Jkondo1*nc[d[0, 0], f[0, 0, 1], d[1, 0], f[1, 0, 1]])/4 - (Jkondo1*nc[d[0, 0], f[0, 0, 1], d[1, 1], f[1, 0, 0]])/2 - (Jkondo2*nc[d[0, 0], f[0, 1, 0], d[1, 0], f[1, 1, 0]])/4 + 
+   (Jkondo2*nc[d[0, 0], f[0, 1, 1], d[1, 0], f[1, 1, 1]])/4 - (Jkondo2*nc[d[0, 0], f[0, 1, 1], d[1, 1], f[1, 1, 0]])/2 - (Jkondo1*nc[d[0, 1], f[0, 0, 0], d[1, 0], f[1, 0, 1]])/2 + (Jkondo1*nc[d[0, 1], f[0, 0, 0], d[1, 1], f[1, 0, 0]])/4 - 
+   (Jkondo1*nc[d[0, 1], f[0, 0, 1], d[1, 1], f[1, 0, 1]])/4 - (Jkondo2*nc[d[0, 1], f[0, 1, 0], d[1, 0], f[1, 1, 1]])/2 + (Jkondo2*nc[d[0, 1], f[0, 1, 0], d[1, 1], f[1, 1, 0]])/4 - (Jkondo2*nc[d[0, 1], f[0, 1, 1], d[1, 1], f[1, 1, 1]])/4
 H-conj[H]=0
 SCALE[0]=1.0510537250399226
 faktor=1.6479184330021646
 Generating basis
 Basis states generated.
-BASIS NR=16
-Basis: basis.ZERO..QS
+BASIS NR=64
+Transformation rule: projector1[ d[] ] -> nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]] + 2*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+PROJECTED NR=32 TT3={0, Null}
+Basis: basis.ONE.KONDO.QS
 PREC=1000
-Tmin=1.*^-10
-Tmin=1.*^-10 ==> Nmax=42
-DISCNMAX=42
-mMAX=84
+Tmin=1.*^-15
+Tmin=1.*^-15 ==> Nmax=62
+DISCNMAX=62
+mMAX=124
 Diagonalisation.
-Discretization checksum [-1] (channel 1): 2.784154609541307270170357727625724949`10.*^-41
-Discretization checksum [-1] (channel 2): 2.784154609541307270170357727625724949`10.*^-41
+Discretization checksum [-1] (channel 1): 2.290040484266849034268430612907880625`10.*^-60
+Discretization checksum [-1] (channel 2): 2.290040484266849034268430612907880625`10.*^-60
 BAND="flat" thetaCh={"2.", "2."}
 Discretization (channel 1)
 "xitable" (channel 1)
@@ -85,6 +91,26 @@ Discretization (channel 1)
 1.740360405e-10
 1.004797548e-10
 5.801201349e-11
+3.34932516e-11
+1.933733783e-11
+1.11644172e-11
+6.445779276e-12
+3.7214724e-12
+2.148593092e-12
+1.2404908e-12
+7.161976974e-13
+4.134969334e-13
+2.387325658e-13
+1.378323111e-13
+7.957752193e-14
+4.594410371e-14
+2.652584064e-14
+1.531470124e-14
+8.841946881e-15
+5.104900412e-15
+2.947315627e-15
+1.701633471e-15
+9.824385423e-16
 "zetatable" (channel 1)
 0.e-999
 0.e-998
@@ -129,7 +155,27 @@ Discretization (channel 1)
 0.e-964
 0.e-963
 0.e-962
-Precision last xi:952.2651260013099
+0.e-961
+0.e-961
+0.e-960
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-953
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-945
+0.e-945
+Precision last xi:929.8009252716575
 Precision last zeta: 0.
 Discretization (channel 2)
 "xitable" (channel 2)
@@ -176,6 +222,26 @@ Discretization (channel 2)
 1.740360405e-10
 1.004797548e-10
 5.801201349e-11
+3.34932516e-11
+1.933733783e-11
+1.11644172e-11
+6.445779276e-12
+3.7214724e-12
+2.148593092e-12
+1.2404908e-12
+7.161976974e-13
+4.134969334e-13
+2.387325658e-13
+1.378323111e-13
+7.957752193e-14
+4.594410371e-14
+2.652584064e-14
+1.531470124e-14
+8.841946881e-15
+5.104900412e-15
+2.947315627e-15
+1.701633471e-15
+9.824385423e-16
 "zetatable" (channel 2)
 0.e-999
 0.e-998
@@ -220,60 +286,93 @@ Discretization (channel 2)
 0.e-964
 0.e-963
 0.e-962
-Precision last xi:952.2651260013099
+0.e-961
+0.e-961
+0.e-960
+0.e-959
+0.e-958
+0.e-957
+0.e-956
+0.e-955
+0.e-954
+0.e-953
+0.e-953
+0.e-952
+0.e-951
+0.e-950
+0.e-949
+0.e-948
+0.e-947
+0.e-946
+0.e-945
+0.e-945
+Precision last xi:929.8009252716575
 Precision last zeta: 0.
 Discretization done.
 --EOF--
-           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {2, 0, 42, 6}}
+           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {2, 1, 62, 8}}
 
 maketable[]
 
-exnames={d, g, Gamma1, Gamma2, Gamma2to2, Gamma3, Jcharge, Jcharge1, Jcharge2, Jkondo, Jkondo1, Jkondo1ch2, Jkondo1P, Jkondo1Z, Jkondo2, Jkondo2ch2, Jkondo2P, Jkondo2Z, Jkondo3, JkondoP, JkondoZ, Jspin}
+exnames={d, g, Gamma1, Gamma2, Gamma2to2, Gamma3, Jad, Jcharge, Jcharge1, Jcharge2, Jkondo, Jkondo1, Jkondo1ch2, Jkondo1P, Jkondo1Z, Jkondo2, Jkondo2ch2, Jkondo2P, Jkondo2Z, Jkondo3, JkondoP, JkondoZ, Jspin}
 thetaCh={"2.", "2."}
 theta0Ch={"0.2", "0.2"}
 gammaPolCh={"0.252313252202016", "0.252313252202016"}
-checkdefinitions[] -> 0.
+checkdefinitions[] -> -0.002
 calcgsenergy[]
-diagvc[{-2, 1}]
-Generating matrix: ham.ZERO..QS_-2.1
+diagvc[{-2, 2}]
+Generating matrix: ham.ONE.KONDO.QS_-2.2
 hamil={{-coefzeta[1, 0] - coefzeta[2, 0]}}
 dim={1, 1}
 det[vec]=1. 1-abs=0.
 orthogonality check=0.
-diagvc[{-1, 2}]
-Generating matrix: ham.ZERO..QS_-1.2
-hamil={{-coefzeta[1, 0], 0}, {0, -coefzeta[2, 0]}}
+diagvc[{-1, 1}]
+Generating matrix: ham.ONE.KONDO.QS_-1.1
+hamil={{(-3*Jkondo2)/4 - coefzeta[1, 0], 0}, {0, (-3*Jkondo1)/4 - coefzeta[2, 0]}}
 dim={2, 2}
 det[vec]=-1. 1-abs=0.
 orthogonality check=0.
-diagvc[{0, 1}]
-Generating matrix: ham.ZERO..QS_0.1
-hamil={{-coefzeta[1, 0] + coefzeta[2, 0], 0, 0}, {0, 0, 0}, {0, 0, coefzeta[1, 0] - coefzeta[2, 0]}}
-dim={3, 3}
+diagvc[{-1, 3}]
+Generating matrix: ham.ONE.KONDO.QS_-1.3
+hamil={{(Jkondo2 - 4*coefzeta[1, 0])/4, 0}, {0, (Jkondo1 - 4*coefzeta[2, 0])/4}}
+dim={2, 2}
 det[vec]=-1. 1-abs=0.
 orthogonality check=0.
-diagvc[{0, 3}]
-Generating matrix: ham.ZERO..QS_0.3
-hamil={{0}}
+diagvc[{0, 2}]
+Generating matrix: ham.ONE.KONDO.QS_0.2
+hamil={{-coefzeta[1, 0] + coefzeta[2, 0], 0, 0, 0}, {0, (-3*Jkondo1)/4, -(Sqrt[3]*Jkondo2)/4, 0}, {0, -(Sqrt[3]*Jkondo2)/4, (Jkondo1 - 2*Jkondo2)/4, 0}, {0, 0, 0, coefzeta[1, 0] - coefzeta[2, 0]}}
+dim={4, 4}
+det[vec]=-1. 1-abs=0.
+orthogonality check=0.
+diagvc[{0, 4}]
+Generating matrix: ham.ONE.KONDO.QS_0.4
+hamil={{(Jkondo1 + Jkondo2)/4}}
 dim={1, 1}
 det[vec]=1. 1-abs=0.
 orthogonality check=0.
-diagvc[{1, 2}]
-Generating matrix: ham.ZERO..QS_1.2
-hamil={{coefzeta[2, 0], 0}, {0, coefzeta[1, 0]}}
+diagvc[{1, 1}]
+Generating matrix: ham.ONE.KONDO.QS_1.1
+hamil={{(-3*Jkondo1)/4 + coefzeta[2, 0], 0}, {0, (-3*Jkondo2)/4 + coefzeta[1, 0]}}
 dim={2, 2}
 det[vec]=-1. 1-abs=0.
 orthogonality check=0.
-diagvc[{2, 1}]
-Generating matrix: ham.ZERO..QS_2.1
+diagvc[{1, 3}]
+Generating matrix: ham.ONE.KONDO.QS_1.3
+hamil={{Jkondo1/4 + coefzeta[2, 0], 0}, {0, Jkondo2/4 + coefzeta[1, 0]}}
+dim={2, 2}
+det[vec]=-1. 1-abs=0.
+orthogonality check=0.
+diagvc[{2, 2}]
+Generating matrix: ham.ONE.KONDO.QS_2.2
 hamil={{coefzeta[1, 0] + coefzeta[2, 0]}}
 dim={1, 1}
 det[vec]=1. 1-abs=0.
 orthogonality check=0.
-Lowest energies (absolute):{0., 0., 0., 0., 0., 0., 0., 0., 0., 0.}
-Lowest energies (GS shifted):{0., 0., 0., 0., 0., 0., 0., 0., 0., 0.}
+Lowest energies (absolute):{-0.001, -0.00075, -0.00075, -0.00075, -0.00075, 0., 0., 0., 0., 0., 0.00025, 0.00025, 0.00025, 0.00025, 0.0005}
+Lowest energies (GS shifted):{0., 0.00025, 0.00025, 0.00025, 0.00025, 0.001, 0.001, 0.001, 0.001, 0.001, 0.00125, 0.00125, 0.00125, 0.00125, 0.0015}
 Scale factor SCALE(Ninit):1.0510537250399226
-Lowest energies (shifted and scaled):{0., 0., 0., 0., 0., 0., 0., 0., 0., 0.}
+Lowest energies (shifted and scaled):{0., 0.00023785653772408652, 0.00023785653772408652, 0.00023785653772408652, 0.00023785653772408652, 0.0009514261508963461, 0.0009514261508963461, 0.0009514261508963461, 0.0009514261508963461, 
+   0.0009514261508963461, 0.0011892826886204327, 0.0011892826886204327, 0.0011892826886204327, 0.0011892826886204327, 0.001427139226344519}
 makeireducf GENERAL
 ireducTable: f[0]{}
 ireducTable: f[1]{}
@@ -286,10 +385,10 @@ Loading module modeloperators.m
 Can't load modeloperators.m. Continuing.
 -- maketable[] done --
 Timing report
-{basis, 0.008415`4.3765991138078135}
-{ham, 0.0182049999999999999`3.9335844263822928}
-{maketable, 0.217608`5.789219850937508}
-{xi, 0.476827`6.129905832549918}
+{basis, 0.165618`5.670652529301427}
+{ham, 0.414446`5.165922958930051}
+{maketable, 0.774417`6.34051987153231}
+{xi, 1.752607`6.69522953545051}
 {_, 0}
 data
 gammaPol=0.252313252202016

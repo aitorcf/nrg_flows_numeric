@@ -1,0 +1,430 @@
+NRG Ljubljana 2.4.3.34 (c) Rok Zitko, rok.zitko@ijs.si, 2005-2019
+Mathematica version: 12.1.1 for Linux x86 (64-bit) (June 19, 2020)
+sneg version: 1.251
+Loading module initialparse.m
+Options: {}
+Loading module models.m
+"models started"
+Loading module custommodels.m
+Can't load custommodels.m. Continuing.
+Loading module ./superring.m
+def2ch, NRDOTS=2
+COEFCHANNELS:2
+H0=coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]]) + coefzeta[2, 0]*(-1 + nc[f[0, 1, 0], f[1, 1, 0]] + nc[f[0, 1, 1], f[1, 1, 1]])
+adddots, nrdots=2
+params={gammaPol -> Sqrt[gammaA*theta0]/Sqrt[Pi], gammaPolCh[ch_] :> Sqrt[1/Pi*theta0Ch[ch]*gammaA], hybV[i_, j_] :> Sqrt[1/Pi]*V[i, j], coefzeta[ch_, j__] :> N[bandrescale*zeta[ch][j]], coefxi[ch_, j__] :> N[bandrescale*xi[ch][j]], 
+   coefrung[ch_, j__] :> N[bandrescale*zetaR[ch][j]], coefdelta[ch_, j__] :> N[bandrescale*scdelta[ch][j]], coefkappa[ch_, j__] :> N[bandrescale*sckappa[ch][j]], U -> 1, delta -> 0., t -> 0., 
+   gammaPol2 -> 0.05641895835477563*Sqrt[gammaA*thetaCh[1]], gammaPol2to2 -> Sqrt[extraGamma2to2*gammaA*thetaCh[2]]/Sqrt[Pi], gammaPolch1 -> 0.126156626101008*Sqrt[gammaA*thetaCh[1]], 
+   gammaPolch2 -> 0.05641895835477563*Sqrt[gammaA*thetaCh[2]], gammaPolch3 -> Sqrt[extraGamma3*gammaA*thetaCh[3]]/Sqrt[Pi], Jspin -> extraJspin*gammaA, Jcharge -> extraJcharge*gammaA, Jcharge1 -> extraJcharge1*gammaA, 
+   Jcharge2 -> extraJcharge2*gammaA, Jkondo -> extraJkondo*gammaA, Jkondo1 -> extraJkondo1*gammaA, Jkondo2 -> extraJkondo2*gammaA, Jkondo3 -> extraJkondo3*gammaA, Jad -> extraJad*gammaA, Jkondo1P -> extraJkondo1P*gammaA, 
+   Jkondo2P -> extraJkondo2P*gammaA, Jkondo1Z -> extraJkondo1Z*gammaA, Jkondo2Z -> extraJkondo2Z*gammaA, JkondoP -> extraJkondoP*gammaA, JkondoZ -> extraJkondoZ*gammaA, Jkondo1ch2 -> extraJkondo1ch2*gammaA, 
+   Jkondo2ch2 -> extraJkondo2ch2*gammaA, gep -> extrag, dd -> extrad, U -> 1, Gamma1 -> 0.05, Gamma2 -> 0.01}
+NRDOTS:2
+CHANNELS:2
+basis:{a[], d[], f[0], f[1]}
+lrchain:{}
+lrextrarule:{}
+NROPS:4
+Hamiltonian generated. 2*U - U*nc[a[0, 0], a[1, 0]] + gammaPolch1*nc[a[0, 0], f[1, 0, 0]] + gammaPolch2*nc[a[0, 0], f[1, 1, 0]] - U*nc[a[0, 1], a[1, 1]] + gammaPolch1*nc[a[0, 1], f[1, 0, 1]] + gammaPolch2*nc[a[0, 1], f[1, 1, 1]] - 
+   U*nc[d[0, 0], d[1, 0]] + gammaPolch1*nc[d[0, 0], f[1, 0, 0]] + gammaPolch2*nc[d[0, 0], f[1, 1, 0]] - U*nc[d[0, 1], d[1, 1]] + gammaPolch1*nc[d[0, 1], f[1, 0, 1]] + gammaPolch2*nc[d[0, 1], f[1, 1, 1]] + 
+   gammaPolch1*nc[f[0, 0, 0], a[1, 0]] + gammaPolch1*nc[f[0, 0, 0], d[1, 0]] + gammaPolch1*nc[f[0, 0, 1], a[1, 1]] + gammaPolch1*nc[f[0, 0, 1], d[1, 1]] + gammaPolch2*nc[f[0, 1, 0], a[1, 0]] + gammaPolch2*nc[f[0, 1, 0], d[1, 0]] + 
+   gammaPolch2*nc[f[0, 1, 1], a[1, 1]] + gammaPolch2*nc[f[0, 1, 1], d[1, 1]] - 2*U*nc[a[0, 0], a[0, 1], a[1, 0], a[1, 1]] - 2*U*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+H-conj[H]=0
+SCALE[0]=1.0510537250399226
+faktor=1.6479184330021646
+Generating basis
+Basis states generated.
+BASIS NR=256
+Basis: basis.model..QS
+PREC=1000
+Tmin=1.*^-10
+Tmin=1.*^-10 ==> Nmax=42
+DISCNMAX=42
+mMAX=84
+Diagonalisation.
+Discretization checksum [-1] (channel 1): 2.784154609541307270170357727625724949`10.*^-41
+Discretization checksum [-1] (channel 2): 2.784154609541307270170357727625724949`10.*^-41
+BAND="flat" thetaCh={"2.", "2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+0.5049098776
+0.3180107496
+0.195230373
+0.1153712823
+0.06714955356
+0.0388746386
+0.02246477381
+0.01297399467
+0.007491300293
+0.004325250724
+0.002497212862
+0.001441771944
+0.0008324084643
+0.0004805914519
+0.0002774696428
+0.0001601971804
+0.00009248988666
+0.00005339906124
+0.00003082996243
+0.00001779968712
+0.00001027665415
+5.933229041e-6
+3.425551384e-6
+1.977743014e-6
+1.141850461e-6
+6.592476713e-7
+3.806168205e-7
+2.197492238e-7
+1.268722735e-7
+7.324974125e-8
+4.229075783e-8
+2.441658042e-8
+1.409691928e-8
+8.138860139e-9
+4.698973092e-9
+2.71295338e-9
+1.566324364e-9
+9.043177933e-10
+5.221081214e-10
+3.014392644e-10
+1.740360405e-10
+1.004797548e-10
+5.801201349e-11
+"zetatable" (channel 1)
+0.e-999
+0.e-998
+0.e-998
+0.e-997
+0.e-996
+0.e-995
+0.e-994
+0.e-993
+0.e-992
+0.e-991
+0.e-991
+0.e-990
+0.e-989
+0.e-988
+0.e-987
+0.e-986
+0.e-985
+0.e-984
+0.e-984
+0.e-983
+0.e-982
+0.e-981
+0.e-980
+0.e-979
+0.e-978
+0.e-977
+0.e-976
+0.e-976
+0.e-975
+0.e-974
+0.e-973
+0.e-972
+0.e-971
+0.e-970
+0.e-969
+0.e-968
+0.e-968
+0.e-967
+0.e-966
+0.e-965
+0.e-964
+0.e-963
+0.e-962
+Precision last xi:952.2651260013099
+Precision last zeta: 0.
+Discretization (channel 2)
+"xitable" (channel 2)
+0.5049098776
+0.3180107496
+0.195230373
+0.1153712823
+0.06714955356
+0.0388746386
+0.02246477381
+0.01297399467
+0.007491300293
+0.004325250724
+0.002497212862
+0.001441771944
+0.0008324084643
+0.0004805914519
+0.0002774696428
+0.0001601971804
+0.00009248988666
+0.00005339906124
+0.00003082996243
+0.00001779968712
+0.00001027665415
+5.933229041e-6
+3.425551384e-6
+1.977743014e-6
+1.141850461e-6
+6.592476713e-7
+3.806168205e-7
+2.197492238e-7
+1.268722735e-7
+7.324974125e-8
+4.229075783e-8
+2.441658042e-8
+1.409691928e-8
+8.138860139e-9
+4.698973092e-9
+2.71295338e-9
+1.566324364e-9
+9.043177933e-10
+5.221081214e-10
+3.014392644e-10
+1.740360405e-10
+1.004797548e-10
+5.801201349e-11
+"zetatable" (channel 2)
+0.e-999
+0.e-998
+0.e-998
+0.e-997
+0.e-996
+0.e-995
+0.e-994
+0.e-993
+0.e-992
+0.e-991
+0.e-991
+0.e-990
+0.e-989
+0.e-988
+0.e-987
+0.e-986
+0.e-985
+0.e-984
+0.e-984
+0.e-983
+0.e-982
+0.e-981
+0.e-980
+0.e-979
+0.e-978
+0.e-977
+0.e-976
+0.e-976
+0.e-975
+0.e-974
+0.e-973
+0.e-972
+0.e-971
+0.e-970
+0.e-969
+0.e-968
+0.e-968
+0.e-967
+0.e-966
+0.e-965
+0.e-964
+0.e-963
+0.e-962
+Precision last xi:952.2651260013099
+Precision last zeta: 0.
+Discretization done.
+--EOF--
+           {{# Input file for NRG Ljubljana, Rok Zitko, rok.zitko@ijs.si, 2005-2015}, {# symtype , QS}, {# Using sneg version , 1.251}, {#!8}, {# Number of channels, impurities, chain sites, subspaces: }, {2, 2, 42, 15}}
+
+maketable[]
+
+exnames={d, g, Gamma1, Gamma2, Gamma2to2, Gamma3, Jad, Jcharge, Jcharge1, Jcharge2, Jkondo, Jkondo1, Jkondo1ch2, Jkondo1P, Jkondo1Z, Jkondo2, Jkondo2ch2, Jkondo2P, Jkondo2Z, Jkondo3, JkondoP, JkondoZ, Jspin, U}
+thetaCh={"2.", "2."}
+theta0Ch={"0.2", "0.2"}
+gammaPolCh={"0.252313252202016", "0.252313252202016"}
+checkdefinitions[] -> -3.934393058435491
+calcgsenergy[]
+diagvc[{-4, 1}]
+Generating matrix: ham.model..QS_-4.1
+hamil={{2*U}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{-3, 2}]
+Generating matrix: ham.model..QS_-3.2
+hamil={{2*U, 0, gammaPolch2, gammaPolch2}, {0, 2*U, gammaPolch1, gammaPolch1}, {gammaPolch2, gammaPolch1, U, 0}, {gammaPolch2, gammaPolch1, 0, U}}
+dim={4, 4}
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=2.6952390832294634*^-15
+diagvc[{-2, 1}]
+Generating matrix: ham.model..QS_-2.1
+hamil={{2*U, 0, Sqrt[2]*gammaPolch2, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0}, {0, 2*U, gammaPolch1, gammaPolch1, 0, gammaPolch2, gammaPolch2, 0, 0, 0}, {Sqrt[2]*gammaPolch2, gammaPolch1, U, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, gammaPolch2, 0}, 
+   {Sqrt[2]*gammaPolch2, gammaPolch1, 0, U, 0, 0, 0, 0, gammaPolch2, Sqrt[2]*gammaPolch2}, {0, 0, 0, 0, 2*U, Sqrt[2]*gammaPolch1, Sqrt[2]*gammaPolch1, 0, 0, 0}, 
+   {0, gammaPolch2, 0, 0, Sqrt[2]*gammaPolch1, U, 0, Sqrt[2]*gammaPolch1, gammaPolch1, 0}, {0, gammaPolch2, 0, 0, Sqrt[2]*gammaPolch1, 0, U, 0, gammaPolch1, Sqrt[2]*gammaPolch1}, 
+   {0, 0, Sqrt[2]*gammaPolch2, 0, 0, Sqrt[2]*gammaPolch1, 0, 2*U, 0, 0}, {0, 0, gammaPolch2, gammaPolch2, 0, gammaPolch1, gammaPolch1, 0, 0, 0}, {0, 0, 0, Sqrt[2]*gammaPolch2, 0, 0, Sqrt[2]*gammaPolch1, 0, 0, 2*U}}
+dim={10, 10}
+det[vec]=-1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=1.265369685755221*^-14
+diagvc[{-2, 3}]
+Generating matrix: ham.model..QS_-2.3
+hamil={{2*U, gammaPolch1, gammaPolch1, -gammaPolch2, -gammaPolch2, 0}, {gammaPolch1, U, 0, 0, 0, -gammaPolch2}, {gammaPolch1, 0, U, 0, 0, gammaPolch2}, {-gammaPolch2, 0, 0, U, 0, -gammaPolch1}, {-gammaPolch2, 0, 0, 0, U, gammaPolch1}, 
+   {0, -gammaPolch2, gammaPolch2, -gammaPolch1, gammaPolch1, 0}}
+dim={6, 6}
+det[vec]=-1.0000000000000004 1-abs=-4.440892098500626*^-16
+orthogonality check=4.797483585752463*^-15
+diagvc[{-1, 2}]
+Generating matrix: ham.model..QS_-1.2
+hamil={{2*U, gammaPolch1, gammaPolch1, 0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0, 0, 0, 0, 0, 0}, 
+   {gammaPolch1, U, 0, 0, 0, 0, -gammaPolch2, -(gammaPolch2/Sqrt[2]), 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0, 0, 0, 0, 0}, 
+   {gammaPolch1, 0, U, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -gammaPolch2, 0, 0, Sqrt[3/2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0}, 
+   {0, 0, 0, 2*U, Sqrt[2]*gammaPolch1, Sqrt[2]*gammaPolch1, 0, 0, 0, 0, 0, 0, gammaPolch2, gammaPolch2, 0, 0, 0, 0, 0, 0}, 
+   {-(gammaPolch2/Sqrt[2]), 0, 0, Sqrt[2]*gammaPolch1, U, 0, Sqrt[2]*gammaPolch1, gammaPolch1, 0, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -gammaPolch2/2, 0, (Sqrt[3]*gammaPolch2)/2, 0, 0}, 
+   {-(gammaPolch2/Sqrt[2]), 0, 0, Sqrt[2]*gammaPolch1, 0, U, 0, gammaPolch1, Sqrt[2]*gammaPolch1, 0, 0, 0, 0, 0, 0, -gammaPolch2/2, -(gammaPolch2/Sqrt[2]), -(Sqrt[3]*gammaPolch2)/2, 0, 0}, 
+   {0, -gammaPolch2, 0, 0, Sqrt[2]*gammaPolch1, 0, 2*U, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, gammaPolch2, 0}, 
+   {0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0, gammaPolch1, gammaPolch1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2])}, 
+   {0, 0, -gammaPolch2, 0, 0, Sqrt[2]*gammaPolch1, 0, 0, 2*U, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, gammaPolch2}, 
+   {-(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0, 0, 0, 0, 0, U, 0, -gammaPolch1, 0, 0, -(Sqrt[3/2]*gammaPolch2), -(Sqrt[3]*gammaPolch2)/2, 0, -gammaPolch2/2, 0, 0}, 
+   {-(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0, 0, 0, 0, 0, 0, U, gammaPolch1, 0, 0, 0, -(Sqrt[3]*gammaPolch2)/2, -(Sqrt[3/2]*gammaPolch2), gammaPolch2/2, 0, 0}, 
+   {0, -(Sqrt[3/2]*gammaPolch2), Sqrt[3/2]*gammaPolch2, 0, 0, 0, 0, 0, 0, -gammaPolch1, gammaPolch1, 0, 0, 0, 0, 0, 0, 0, Sqrt[3/2]*gammaPolch2, -(Sqrt[3/2]*gammaPolch2)}, 
+   {0, 0, 0, gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, U, 0, -gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, -(Sqrt[3/2]*gammaPolch1), 0, 0}, 
+   {0, 0, 0, gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, 0, U, 0, -(gammaPolch1/Sqrt[2]), -gammaPolch1, Sqrt[3/2]*gammaPolch1, 0, 0}, 
+   {0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), 0, 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, -gammaPolch1, 0, 2*U, 0, 0, 0, gammaPolch1, 0}, 
+   {0, 0, 0, 0, -gammaPolch2/2, -gammaPolch2/2, 0, 0, 0, -(Sqrt[3]*gammaPolch2)/2, -(Sqrt[3]*gammaPolch2)/2, 0, -(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2]), 0, 0, 0, 0, -(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2])}, 
+   {0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), 0, 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, -gammaPolch1, 0, 0, 2*U, 0, 0, gammaPolch1}, 
+   {0, 0, 0, 0, (Sqrt[3]*gammaPolch2)/2, -(Sqrt[3]*gammaPolch2)/2, 0, 0, 0, -gammaPolch2/2, gammaPolch2/2, 0, -(Sqrt[3/2]*gammaPolch1), Sqrt[3/2]*gammaPolch1, 0, 0, 0, 0, Sqrt[3/2]*gammaPolch1, -(Sqrt[3/2]*gammaPolch1)}, 
+   {0, 0, 0, 0, 0, 0, gammaPolch2, -(gammaPolch2/Sqrt[2]), 0, 0, 0, Sqrt[3/2]*gammaPolch2, 0, 0, gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, Sqrt[3/2]*gammaPolch1, U, 0}, 
+   {0, 0, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), gammaPolch2, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, -(gammaPolch1/Sqrt[2]), gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, U}}
+dim={20, 20}
+det[vec]=1.0000000000000004 1-abs=-4.440892098500626*^-16
+orthogonality check=5.936858042064017*^-14
+diagvc[{-1, 4}]
+Generating matrix: ham.model..QS_-1.4
+hamil={{U, 0, -gammaPolch1, gammaPolch2}, {0, U, gammaPolch1, -gammaPolch2}, {-gammaPolch1, gammaPolch1, 0, 0}, {gammaPolch2, -gammaPolch2, 0, 0}}
+dim={4, 4}
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=2.7559742486060778*^-15
+diagvc[{0, 1}]
+Generating matrix: ham.model..QS_0.1
+hamil={{2*U, Sqrt[2]*gammaPolch1, Sqrt[2]*gammaPolch1, 0, 0, 0, Sqrt[2]*gammaPolch2, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 
+   {Sqrt[2]*gammaPolch1, U, 0, Sqrt[2]*gammaPolch1, gammaPolch1, 0, 0, 0, -gammaPolch2, -(gammaPolch2/Sqrt[2]), 0, Sqrt[3/2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0}, 
+   {Sqrt[2]*gammaPolch1, 0, U, 0, gammaPolch1, Sqrt[2]*gammaPolch1, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -gammaPolch2, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0, 0, 0, 0, 0}, 
+   {0, Sqrt[2]*gammaPolch1, 0, 2*U, 0, 0, 0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0}, {0, gammaPolch1, gammaPolch1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -gammaPolch2, -gammaPolch2, 0, 0, 0, 0, 0, 0}, 
+   {0, 0, Sqrt[2]*gammaPolch1, 0, 0, 2*U, 0, 0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0}, 
+   {Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, U, 0, -gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, -(Sqrt[3/2]*gammaPolch1), 0, 0, Sqrt[2]*gammaPolch2, gammaPolch2, 0, 0, 0, 0}, 
+   {Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0, U, 0, -(gammaPolch1/Sqrt[2]), -gammaPolch1, Sqrt[3/2]*gammaPolch1, 0, 0, 0, gammaPolch2, Sqrt[2]*gammaPolch2, 0, 0, 0}, 
+   {0, -gammaPolch2, 0, 0, 0, 0, -gammaPolch1, 0, 2*U, 0, 0, 0, gammaPolch1, 0, 0, 0, 0, gammaPolch2, 0, 0}, 
+   {0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0, 0, 0, -(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2]), 0, 0, 0, 0, -(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2]), 0, 0, 0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0}, 
+   {0, 0, -gammaPolch2, 0, 0, 0, 0, -gammaPolch1, 0, 0, 2*U, 0, 0, gammaPolch1, 0, 0, 0, 0, gammaPolch2, 0}, 
+   {0, Sqrt[3/2]*gammaPolch2, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, -(Sqrt[3/2]*gammaPolch1), Sqrt[3/2]*gammaPolch1, 0, 0, 0, 0, Sqrt[3/2]*gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), Sqrt[3/2]*gammaPolch2, 0}, 
+   {0, 0, 0, Sqrt[2]*gammaPolch2, -gammaPolch2, 0, 0, 0, gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, Sqrt[3/2]*gammaPolch1, U, 0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2}, 
+   {0, 0, 0, 0, -gammaPolch2, Sqrt[2]*gammaPolch2, 0, 0, 0, -(gammaPolch1/Sqrt[2]), gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, U, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2}, 
+   {0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 2*U, 0, 0, Sqrt[2]*gammaPolch1, 0, 0}, {0, 0, 0, 0, 0, 0, gammaPolch2, gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -gammaPolch1, -gammaPolch1, 0}, 
+   {0, 0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, 2*U, 0, Sqrt[2]*gammaPolch1, 0}, 
+   {0, 0, 0, 0, 0, 0, 0, 0, gammaPolch2, -(gammaPolch2/Sqrt[2]), 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, Sqrt[2]*gammaPolch1, -gammaPolch1, 0, U, 0, Sqrt[2]*gammaPolch1}, 
+   {0, 0, 0, 0, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), gammaPolch2, Sqrt[3/2]*gammaPolch2, 0, 0, 0, -gammaPolch1, Sqrt[2]*gammaPolch1, 0, U, Sqrt[2]*gammaPolch1}, 
+   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, Sqrt[2]*gammaPolch2, 0, 0, 0, Sqrt[2]*gammaPolch1, Sqrt[2]*gammaPolch1, 2*U}}
+dim={20, 20}
+det[vec]=1.0000000000000004 1-abs=-4.440892098500626*^-16
+orthogonality check=6.328878672909042*^-14
+diagvc[{0, 3}]
+Generating matrix: ham.model..QS_0.3
+hamil={{U, 0, -gammaPolch1, 0, 0, gammaPolch2, gammaPolch2/Sqrt[2], 0, gammaPolch2/Sqrt[6], 0, 0, (2*gammaPolch2)/Sqrt[3], 0, 0, 0}, 
+   {0, U, gammaPolch1, 0, 0, 0, gammaPolch2/Sqrt[2], gammaPolch2, -(gammaPolch2/Sqrt[6]), 0, 0, (-2*gammaPolch2)/Sqrt[3], 0, 0, 0}, {-gammaPolch1, gammaPolch1, 0, 0, 0, 0, 0, 0, 0, -gammaPolch2, gammaPolch2, 0, 0, 0, 0}, 
+   {0, 0, 0, U, 0, -gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, -(Sqrt[3/2]*gammaPolch1), 0, 0, 0, -gammaPolch2, 0, 0}, {0, 0, 0, 0, U, 0, -(gammaPolch1/Sqrt[2]), -gammaPolch1, Sqrt[3/2]*gammaPolch1, 0, 0, 0, gammaPolch2, 0, 0}, 
+   {gammaPolch2, 0, 0, -gammaPolch1, 0, 2*U, 0, 0, 0, gammaPolch1, 0, 0, 0, -gammaPolch2, 0}, {gammaPolch2/Sqrt[2], gammaPolch2/Sqrt[2], 0, -(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2]), 0, 0, 0, 0, -(gammaPolch1/Sqrt[2]), 
+    -(gammaPolch1/Sqrt[2]), 0, 0, gammaPolch2/Sqrt[2], gammaPolch2/Sqrt[2]}, {0, gammaPolch2, 0, 0, -gammaPolch1, 0, 0, 2*U, 0, 0, gammaPolch1, 0, 0, 0, -gammaPolch2}, 
+   {gammaPolch2/Sqrt[6], -(gammaPolch2/Sqrt[6]), 0, -(Sqrt[3/2]*gammaPolch1), Sqrt[3/2]*gammaPolch1, 0, 0, 0, 0, Sqrt[3/2]*gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, 0, -(gammaPolch2/Sqrt[6]), gammaPolch2/Sqrt[6]}, 
+   {0, 0, -gammaPolch2, 0, 0, gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, Sqrt[3/2]*gammaPolch1, U, 0, 0, 0, 0, 0}, {0, 0, gammaPolch2, 0, 0, 0, -(gammaPolch1/Sqrt[2]), gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, U, 0, 0, 0, 0}, 
+   {(2*gammaPolch2)/Sqrt[3], (-2*gammaPolch2)/Sqrt[3], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, (-2*gammaPolch2)/Sqrt[3], (2*gammaPolch2)/Sqrt[3]}, {0, 0, 0, -gammaPolch2, gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, -gammaPolch1, gammaPolch1}, 
+   {0, 0, 0, 0, 0, -gammaPolch2, gammaPolch2/Sqrt[2], 0, -(gammaPolch2/Sqrt[6]), 0, 0, (-2*gammaPolch2)/Sqrt[3], -gammaPolch1, U, 0}, 
+   {0, 0, 0, 0, 0, 0, gammaPolch2/Sqrt[2], -gammaPolch2, gammaPolch2/Sqrt[6], 0, 0, (2*gammaPolch2)/Sqrt[3], gammaPolch1, 0, U}}
+dim={15, 15}
+det[vec]=-1. 1-abs=0.
+orthogonality check=3.669896020354104*^-14
+diagvc[{0, 5}]
+Generating matrix: ham.model..QS_0.5
+hamil={{0}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+diagvc[{1, 2}]
+Generating matrix: ham.model..QS_1.2
+hamil={{U, 0, -gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, -(Sqrt[3/2]*gammaPolch1), 0, 0, -gammaPolch2, -(gammaPolch2/Sqrt[2]), 0, 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0, 0}, 
+   {0, U, 0, -(gammaPolch1/Sqrt[2]), -gammaPolch1, Sqrt[3/2]*gammaPolch1, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -gammaPolch2, 0, 0, 0, Sqrt[3/2]*gammaPolch2, 0, 0, 0, 0, 0}, 
+   {-gammaPolch1, 0, 2*U, 0, 0, 0, gammaPolch1, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, 0}, 
+   {-(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2]), 0, 0, 0, 0, -(gammaPolch1/Sqrt[2]), -(gammaPolch1/Sqrt[2]), 0, 0, 0, gammaPolch2/2, gammaPolch2/2, 0, 0, (Sqrt[3]*gammaPolch2)/2, (Sqrt[3]*gammaPolch2)/2, 0, 0, 0}, 
+   {0, -gammaPolch1, 0, 0, 2*U, 0, 0, gammaPolch1, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0}, 
+   {-(Sqrt[3/2]*gammaPolch1), Sqrt[3/2]*gammaPolch1, 0, 0, 0, 0, Sqrt[3/2]*gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, 0, 0, (Sqrt[3]*gammaPolch2)/2, -(Sqrt[3]*gammaPolch2)/2, 0, 0, -gammaPolch2/2, gammaPolch2/2, 0, 0, 0}, 
+   {0, 0, gammaPolch1, -(gammaPolch1/Sqrt[2]), 0, Sqrt[3/2]*gammaPolch1, U, 0, 0, 0, 0, 0, 0, -gammaPolch2, 0, 0, 0, 0, 0, 0}, 
+   {0, 0, 0, -(gammaPolch1/Sqrt[2]), gammaPolch1, -(Sqrt[3/2]*gammaPolch1), 0, U, 0, 0, 0, 0, 0, -gammaPolch2, 0, 0, 0, 0, 0, 0}, {-gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 2*U, 0, 0, Sqrt[2]*gammaPolch1, 0, 0, 0, 0, 0, gammaPolch2, 0, 0}, 
+   {-(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0, 0, 0, 0, 0, 0, 0, 0, 0, -gammaPolch1, -gammaPolch1, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0}, 
+   {0, -gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, 2*U, 0, Sqrt[2]*gammaPolch1, 0, 0, 0, 0, 0, gammaPolch2, 0}, 
+   {0, 0, -(gammaPolch2/Sqrt[2]), gammaPolch2/2, 0, (Sqrt[3]*gammaPolch2)/2, 0, 0, Sqrt[2]*gammaPolch1, -gammaPolch1, 0, U, 0, Sqrt[2]*gammaPolch1, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2])}, 
+   {0, 0, 0, gammaPolch2/2, -(gammaPolch2/Sqrt[2]), -(Sqrt[3]*gammaPolch2)/2, 0, 0, 0, -gammaPolch1, Sqrt[2]*gammaPolch1, 0, U, Sqrt[2]*gammaPolch1, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2])}, 
+   {0, 0, 0, 0, 0, 0, -gammaPolch2, -gammaPolch2, 0, 0, 0, Sqrt[2]*gammaPolch1, Sqrt[2]*gammaPolch1, 2*U, 0, 0, 0, 0, 0, 0}, 
+   {-(Sqrt[3/2]*gammaPolch2), Sqrt[3/2]*gammaPolch2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -gammaPolch1, gammaPolch1, Sqrt[3/2]*gammaPolch2, -(Sqrt[3/2]*gammaPolch2), 0}, 
+   {0, 0, -(Sqrt[3/2]*gammaPolch2), (Sqrt[3]*gammaPolch2)/2, 0, -gammaPolch2/2, 0, 0, 0, 0, 0, 0, 0, 0, -gammaPolch1, U, 0, 0, 0, -(Sqrt[3/2]*gammaPolch2)}, 
+   {0, 0, 0, (Sqrt[3]*gammaPolch2)/2, -(Sqrt[3/2]*gammaPolch2), gammaPolch2/2, 0, 0, 0, 0, 0, 0, 0, 0, gammaPolch1, 0, U, 0, 0, -(Sqrt[3/2]*gammaPolch2)}, 
+   {0, 0, 0, 0, 0, 0, 0, 0, gammaPolch2, -(gammaPolch2/Sqrt[2]), 0, 0, 0, 0, Sqrt[3/2]*gammaPolch2, 0, 0, U, 0, -gammaPolch1}, 
+   {0, 0, 0, 0, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), gammaPolch2, 0, 0, 0, -(Sqrt[3/2]*gammaPolch2), 0, 0, 0, U, -gammaPolch1}, 
+   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -(gammaPolch2/Sqrt[2]), -(gammaPolch2/Sqrt[2]), 0, 0, -(Sqrt[3/2]*gammaPolch2), -(Sqrt[3/2]*gammaPolch2), -gammaPolch1, -gammaPolch1, 2*U}}
+dim={20, 20}
+det[vec]=1. 1-abs=0.
+orthogonality check=6.545785268095792*^-14
+diagvc[{1, 4}]
+Generating matrix: ham.model..QS_1.4
+hamil={{0, 0, gammaPolch2, -gammaPolch2}, {0, 0, -gammaPolch1, gammaPolch1}, {gammaPolch2, -gammaPolch1, U, 0}, {-gammaPolch2, gammaPolch1, 0, U}}
+dim={4, 4}
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=2.1198070039773643*^-15
+diagvc[{2, 1}]
+Generating matrix: ham.model..QS_2.1
+hamil={{2*U, 0, 0, Sqrt[2]*gammaPolch1, 0, 0, Sqrt[2]*gammaPolch2, 0, 0, 0}, {0, 0, 0, -gammaPolch1, -gammaPolch1, 0, -gammaPolch2, -gammaPolch2, 0, 0}, {0, 0, 2*U, 0, Sqrt[2]*gammaPolch1, 0, 0, Sqrt[2]*gammaPolch2, 0, 0}, 
+   {Sqrt[2]*gammaPolch1, -gammaPolch1, 0, U, 0, Sqrt[2]*gammaPolch1, 0, 0, -gammaPolch2, 0}, {0, -gammaPolch1, Sqrt[2]*gammaPolch1, 0, U, Sqrt[2]*gammaPolch1, 0, 0, -gammaPolch2, 0}, 
+   {0, 0, 0, Sqrt[2]*gammaPolch1, Sqrt[2]*gammaPolch1, 2*U, 0, 0, 0, 0}, {Sqrt[2]*gammaPolch2, -gammaPolch2, 0, 0, 0, 0, U, 0, -gammaPolch1, Sqrt[2]*gammaPolch2}, 
+   {0, -gammaPolch2, Sqrt[2]*gammaPolch2, 0, 0, 0, 0, U, -gammaPolch1, Sqrt[2]*gammaPolch2}, {0, 0, 0, -gammaPolch2, -gammaPolch2, 0, -gammaPolch1, -gammaPolch1, 2*U, 0}, {0, 0, 0, 0, 0, 0, Sqrt[2]*gammaPolch2, Sqrt[2]*gammaPolch2, 0, 2*U}}
+dim={10, 10}
+det[vec]=1.0000000000000007 1-abs=-6.661338147750939*^-16
+orthogonality check=1.5956839809872935*^-14
+diagvc[{2, 3}]
+Generating matrix: ham.model..QS_2.3
+hamil={{0, -gammaPolch1, gammaPolch1, -gammaPolch2, gammaPolch2, 0}, {-gammaPolch1, U, 0, 0, 0, gammaPolch2}, {gammaPolch1, 0, U, 0, 0, gammaPolch2}, {-gammaPolch2, 0, 0, U, 0, -gammaPolch1}, {gammaPolch2, 0, 0, 0, U, -gammaPolch1}, 
+   {0, gammaPolch2, gammaPolch2, -gammaPolch1, -gammaPolch1, 2*U}}
+dim={6, 6}
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=3.932878967498465*^-15
+diagvc[{3, 2}]
+Generating matrix: ham.model..QS_3.2
+hamil={{U, 0, -gammaPolch1, -gammaPolch2}, {0, U, -gammaPolch1, -gammaPolch2}, {-gammaPolch1, -gammaPolch1, 2*U, 0}, {-gammaPolch2, -gammaPolch2, 0, 2*U}}
+dim={4, 4}
+det[vec]=1.0000000000000002 1-abs=-2.220446049250313*^-16
+orthogonality check=2.125208449834542*^-15
+diagvc[{4, 1}]
+Generating matrix: ham.model..QS_4.1
+hamil={{2*U}}
+dim={1, 1}
+det[vec]=1. 1-abs=0.
+orthogonality check=0.
+Lowest energies (absolute):{-0.19716456942400923, -0.19716456942400912, -0.19716456942400895, -0.19716456942400895, -0.07886890332979478, -0.07886890332979402, -0.07886890332979374, -0.0788689033297937, -0.07886890332979331, 
+   -0.07886890332979268, -0.07130934937572127, -0.07130934937572124, -0.07130934937572124, -0.07130934937572116, -0.07130934937572109, -0.07130934937572107, -0.07130934937572102, -0.07130934937572088, -0.07130934937572087, 
+   -0.07130934937572085}
+Lowest energies (GS shifted):{0., 1.1102230246251565*^-16, 2.7755575615628914*^-16, 2.7755575615628914*^-16, 0.11829566609421445, 0.11829566609421521, 0.11829566609421549, 0.11829566609421553, 0.11829566609421592, 0.11829566609421654, 
+   0.12585522004828797, 0.12585522004828797, 0.12585522004828797, 0.12585522004828809, 0.12585522004828814, 0.12585522004828814, 0.1258552200482882, 0.12585522004828836, 0.12585522004828836, 0.12585522004828836}
+Scale factor SCALE(Ninit):1.0510537250399226
+Lowest energies (shifted and scaled):{0., 1.0562952189556119*^-16, 2.64073804738903*^-16, 2.64073804738903*^-16, 0.11254959025973785, 0.11254959025973857, 0.11254959025973883, 0.11254959025973887, 0.11254959025973925, 0.11254959025973985, 
+   0.11974194758075528, 0.11974194758075528, 0.11974194758075528, 0.11974194758075538, 0.11974194758075543, 0.11974194758075543, 0.11974194758075549, 0.11974194758075564, 0.11974194758075564, 0.11974194758075564}
+makeireducf GENERAL
+ireducTable: f[0]{}
+ireducTable: f[1]{}
+Loading module operators.m
+"operators.m started"
+operators.m done
+Loading module customoperators.m
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m
+Can't load modeloperators.m. Continuing.
+-- maketable[] done --
+Timing report
+{basis, 0.25752`5.862355957173531}
+{ham, 3.021509`5.755677626635396}
+{maketable, 3.451683`6.9895758970882795}
+{xi, 0.48687`6.138958008469357}
+{_, 0}
+data
+gammaPol=0.252313252202016
+"Success!"
